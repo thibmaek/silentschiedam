@@ -1,0 +1,7 @@
+language: node_js
+node_js:
+  - "6"
+  - "5"
+
+notifications:
+  slack: majorivrotterdam:rNokpui6Cyw8TJsjqDhG8Nch
