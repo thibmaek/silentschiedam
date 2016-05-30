@@ -44,7 +44,7 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	eval("__webpack_require__(1);\nmodule.exports = __webpack_require__(234);\n\n\n/*****************\n ** WEBPACK FOOTER\n ** multi main\n ** module id = 0\n ** module chunks = 0\n **/\n//# sourceURL=webpack:///multi_main?");
+	eval("__webpack_require__(1);\nmodule.exports = __webpack_require__(232);\n\n\n/*****************\n ** WEBPACK FOOTER\n ** multi main\n ** module id = 0\n ** module chunks = 0\n **/\n//# sourceURL=webpack:///multi_main?");
 
 /***/ },
 /* 1 */
@@ -1430,25 +1430,13 @@
 /* 231 */
 /***/ function(module, exports, __webpack_require__) {
 
-	eval("'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _react = __webpack_require__(163);\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _components = __webpack_require__(232);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar Home = function Home() {\n  return _react2.default.createElement(\n    'section',\n    null,\n    _react2.default.createElement(_components.HelloWorld, { author: 'Thibault Maekelbergh' })\n  );\n};\n\nexports.default = Home;\n\n/*****************\n ** WEBPACK FOOTER\n ** ./_js/pages/Home.jsx\n ** module id = 231\n ** module chunks = 0\n **/\n//# sourceURL=webpack:///./_js/pages/Home.jsx?");
+	eval("'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _react = __webpack_require__(163);\n\nvar _react2 = _interopRequireDefault(_react);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar Home = function Home() {\n  return _react2.default.createElement(\n    'section',\n    null,\n    'Title'\n  );\n};\n\nexports.default = Home;\n\n/*****************\n ** WEBPACK FOOTER\n ** ./_js/pages/Home.jsx\n ** module id = 231\n ** module chunks = 0\n **/\n//# sourceURL=webpack:///./_js/pages/Home.jsx?");
 
 /***/ },
 /* 232 */
-/***/ function(module, exports, __webpack_require__) {
-
-	eval("'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.HelloWorld = undefined;\n\nvar _HelloWorld2 = __webpack_require__(233);\n\nvar _HelloWorld3 = _interopRequireDefault(_HelloWorld2);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nexports.HelloWorld = _HelloWorld3.default;\n\n/*****************\n ** WEBPACK FOOTER\n ** ./_js/components/index.js\n ** module id = 232\n ** module chunks = 0\n **/\n//# sourceURL=webpack:///./_js/components/index.js?");
-
-/***/ },
-/* 233 */
-/***/ function(module, exports, __webpack_require__) {
-
-	eval("'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _react = __webpack_require__(163);\n\nvar _react2 = _interopRequireDefault(_react);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar HelloWorld = function HelloWorld(props) {\n  var author = props.author;\n\n\n  return _react2.default.createElement(\n    'header',\n    null,\n    _react2.default.createElement(\n      'h1',\n      null,\n      'Hello ',\n      author\n    )\n  );\n};\n\nHelloWorld.propTypes = {\n  author: PropTypes.string\n};\n\nexports.default = HelloWorld;\n\n/*****************\n ** WEBPACK FOOTER\n ** ./_js/components/HelloWorld.jsx\n ** module id = 233\n ** module chunks = 0\n **/\n//# sourceURL=webpack:///./_js/components/HelloWorld.jsx?");
-
-/***/ },
-/* 234 */
 /***/ function(module, exports) {
 
-	eval("// removed by extract-text-webpack-plugin\n\n/*****************\n ** WEBPACK FOOTER\n ** ./_scss/style.scss\n ** module id = 234\n ** module chunks = 0\n **/\n//# sourceURL=webpack:///./_scss/style.scss?");
+	eval("// removed by extract-text-webpack-plugin\n\n/*****************\n ** WEBPACK FOOTER\n ** ./_scss/style.scss\n ** module id = 232\n ** module chunks = 0\n **/\n//# sourceURL=webpack:///./_scss/style.scss?");
 
 /***/ }
 /******/ ]);
