@@ -84,3 +84,16 @@ main {
 h1 {
   font-size: 3rem;
 }
+
+nav {
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 50px;
+}
+
+nav ul {
+  -ms-flex-align: flex-cente;
+  -ms-grid-row-align: flex-cente;
+  align-items: flex-cente;
+}

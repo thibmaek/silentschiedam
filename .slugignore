@@ -8,6 +8,7 @@
 .babelrc
 _config.js
 .gitignore
+.travis.yml
 LICENCE
 README.md
 webpack.config.js
