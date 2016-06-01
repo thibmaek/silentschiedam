@@ -58,8 +58,7 @@ server.views({
   layout: true,
 
   helpersPath: 'helpers',
-  layoutPath: 'layouts',
-  partialsPath: 'partials'
+  layoutPath: 'layouts'
 });
 
 server.start(err => {
