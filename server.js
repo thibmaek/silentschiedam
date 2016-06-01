@@ -48,7 +48,6 @@ server.register(require('./plugins/'), pluginHandler);
 server.register(require('./routes/'), pluginHandler);
 
 server.views({
-
   engines: {
     hbs: require('handlebars')
   },
@@ -61,7 +60,6 @@ server.views({
   helpersPath: 'helpers',
   layoutPath: 'layouts',
   partialsPath: 'partials'
-
 });
 
 server.start(err => {

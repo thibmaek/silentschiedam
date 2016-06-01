@@ -44,7 +44,7 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	eval("__webpack_require__(1);\nmodule.exports = __webpack_require__(234);\n\n\n/*****************\n ** WEBPACK FOOTER\n ** multi main\n ** module id = 0\n ** module chunks = 0\n **/\n//# sourceURL=webpack:///multi_main?");
+	eval("__webpack_require__(1);\nmodule.exports = __webpack_require__(232);\n\n\n/*****************\n ** WEBPACK FOOTER\n ** multi main\n ** module id = 0\n ** module chunks = 0\n **/\n//# sourceURL=webpack:///multi_main?");
 
 /***/ },
 /* 1 */
@@ -1430,25 +1430,32 @@
 /* 231 */
 /***/ function(module, exports, __webpack_require__) {
 
-	eval("'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _react = __webpack_require__(163);\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _components = __webpack_require__(232);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar Home = function Home() {\n  return _react2.default.createElement(\n    'section',\n    null,\n    _react2.default.createElement(_components.HelloWorld, { author: 'Thibault Maekelbergh' })\n  );\n};\n\nexports.default = Home;\n\n/*****************\n ** WEBPACK FOOTER\n ** ./_js/pages/Home.jsx\n ** module id = 231\n ** module chunks = 0\n **/\n//# sourceURL=webpack:///./_js/pages/Home.jsx?");
+	eval("'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _react = __webpack_require__(163);\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _components = __webpack_require__(234);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar Home = function Home() {\n  return _react2.default.createElement(\n    'section',\n    null,\n    _react2.default.createElement('header', null),\n    _react2.default.createElement(\n      'div',\n      null,\n      _react2.default.createElement(\n        'button',\n        null,\n        'Panden'\n      ),\n      _react2.default.createElement(\n        'button',\n        null,\n        'Informatie'\n      )\n    ),\n    _react2.default.createElement(_components.Panden, null)\n  );\n};\n\nexports.default = Home;\n\n/*****************\n ** WEBPACK FOOTER\n ** ./_js/pages/Home.jsx\n ** module id = 231\n ** module chunks = 0\n **/\n//# sourceURL=webpack:///./_js/pages/Home.jsx?");
 
 /***/ },
 /* 232 */
-/***/ function(module, exports, __webpack_require__) {
-
-	eval("'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.HelloWorld = undefined;\n\nvar _HelloWorld2 = __webpack_require__(233);\n\nvar _HelloWorld3 = _interopRequireDefault(_HelloWorld2);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nexports.HelloWorld = _HelloWorld3.default;\n\n/*****************\n ** WEBPACK FOOTER\n ** ./_js/components/index.js\n ** module id = 232\n ** module chunks = 0\n **/\n//# sourceURL=webpack:///./_js/components/index.js?");
-
-/***/ },
-/* 233 */
-/***/ function(module, exports, __webpack_require__) {
-
-	eval("'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _react = __webpack_require__(163);\n\nvar _react2 = _interopRequireDefault(_react);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar HelloWorld = function HelloWorld(props) {\n  var author = props.author;\n\n\n  return _react2.default.createElement(\n    'header',\n    null,\n    _react2.default.createElement(\n      'h1',\n      null,\n      'Hello ',\n      author\n    )\n  );\n};\n\nHelloWorld.propTypes = {\n  author: PropTypes.string\n};\n\nexports.default = HelloWorld;\n\n/*****************\n ** WEBPACK FOOTER\n ** ./_js/components/HelloWorld.jsx\n ** module id = 233\n ** module chunks = 0\n **/\n//# sourceURL=webpack:///./_js/components/HelloWorld.jsx?");
-
-/***/ },
-/* 234 */
 /***/ function(module, exports) {
 
-	eval("// removed by extract-text-webpack-plugin\n\n/*****************\n ** WEBPACK FOOTER\n ** ./_scss/style.scss\n ** module id = 234\n ** module chunks = 0\n **/\n//# sourceURL=webpack:///./_scss/style.scss?");
+	eval("// removed by extract-text-webpack-plugin\n\n/*****************\n ** WEBPACK FOOTER\n ** ./_scss/style.scss\n ** module id = 232\n ** module chunks = 0\n **/\n//# sourceURL=webpack:///./_scss/style.scss?");
+
+/***/ },
+/* 233 */,
+/* 234 */
+/***/ function(module, exports, __webpack_require__) {
+
+	eval("'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.Pand = exports.Panden = undefined;\n\nvar _Panden2 = __webpack_require__(235);\n\nvar _Panden3 = _interopRequireDefault(_Panden2);\n\nvar _Pand2 = __webpack_require__(236);\n\nvar _Pand3 = _interopRequireDefault(_Pand2);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nexports.Panden = _Panden3.default;\nexports.Pand = _Pand3.default;\n\n/*****************\n ** WEBPACK FOOTER\n ** ./_js/components/index.js\n ** module id = 234\n ** module chunks = 0\n **/\n//# sourceURL=webpack:///./_js/components/index.js?");
+
+/***/ },
+/* 235 */
+/***/ function(module, exports, __webpack_require__) {
+
+	eval("'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nvar _react = __webpack_require__(163);\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _ = __webpack_require__(234);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\nvar Panden = function (_Component) {\n  _inherits(Panden, _Component);\n\n  function Panden(props, context) {\n    _classCallCheck(this, Panden);\n\n    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Panden).call(this, props, context));\n\n    _this.state = {};\n    return _this;\n  }\n\n  _createClass(Panden, [{\n    key: 'render',\n    value: function render() {\n      return _react2.default.createElement(_.Pand, { title: 'Pand titel 1', status: 0 });\n    }\n  }]);\n\n  return Panden;\n}(_react.Component);\n\nexports.default = Panden;\n\n/*****************\n ** WEBPACK FOOTER\n ** ./_js/components/Panden.jsx\n ** module id = 235\n ** module chunks = 0\n **/\n//# sourceURL=webpack:///./_js/components/Panden.jsx?");
+
+/***/ },
+/* 236 */
+/***/ function(module, exports, __webpack_require__) {
+
+	eval("'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nvar _react = __webpack_require__(163);\n\nvar _react2 = _interopRequireDefault(_react);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\nvar Pand = function (_Component) {\n  _inherits(Pand, _Component);\n\n  function Pand(props, context) {\n    _classCallCheck(this, Pand);\n\n    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Pand).call(this, props, context));\n\n    _this.state = {};\n    return _this;\n  }\n\n  _createClass(Pand, [{\n    key: 'render',\n    value: function render() {\n      var _props = this.props;\n      var title = _props.title;\n      var status = _props.status;\n\n\n      return _react2.default.createElement(\n        'article',\n        null,\n        _react2.default.createElement(\n          'header',\n          null,\n          _react2.default.createElement(\n            'h2',\n            null,\n            title\n          ),\n          _react2.default.createElement(\n            'span',\n            { className: 'fa fa-circle' },\n            status\n          )\n        )\n      );\n    }\n  }]);\n\n  return Pand;\n}(_react.Component);\n\nPand.propTypes = {\n  title: _react.PropTypes.string,\n  status: _react.PropTypes.number\n};\nexports.default = Pand;\n\n/*****************\n ** WEBPACK FOOTER\n ** ./_js/components/Pand.jsx\n ** module id = 236\n ** module chunks = 0\n **/\n//# sourceURL=webpack:///./_js/components/Pand.jsx?");
 
 /***/ }
 /******/ ]);

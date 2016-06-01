@@ -1,1 +1,2 @@
-export HelloWorld from './HelloWorld';
+export Panden from './Panden';
+export Pand from './Pand';

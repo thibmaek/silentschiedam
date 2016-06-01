@@ -12,7 +12,7 @@
     "node": true,
     "es6": true,
     "amd": false,
-    "mocha": false,
+    "mocha": true,
     "jasmine": false
   },
 

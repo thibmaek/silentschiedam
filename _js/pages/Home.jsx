@@ -1,11 +1,15 @@
 import React from 'react';
-
-import {HelloWorld} from '../components/';
+import {Panden} from '../components/';
 
 const Home = () => {
-  return (
+  return (    
     <section>
-      <HelloWorld author='Thibault Maekelbergh' />
+      <header></header>
+      <div>
+        <button>Panden</button>
+        <button>Informatie</button>
+      </div>
+      <Panden />
     </section>
   );
 };
