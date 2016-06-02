@@ -5,8 +5,15 @@ module.exports = [
   {
     method: 'GET',
     path: '/',
-    handler: (request, reply) => reply.view('index', {
-      title: 'Home'
+    handler: (req, reply) => reply.view('index', {
+      title: 'Silent Schiedam'
+    })
+  },
+  {
+    method: 'GET',
+    path: '/login',
+    handler: (req, reply) => reply.view('login', {
+      title: 'Login'
     })
   }
 
