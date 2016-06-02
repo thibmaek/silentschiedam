@@ -43,7 +43,7 @@ module.exports = {
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
-        loaders: ['url-loader?limit=5000&name=../public/img/img-[hash:6].[ext]']
+        loaders: ['url-loader?limit=5000&name=../img/img-[hash:6].[ext]']
       }
     ]
   },
