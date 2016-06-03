@@ -17,7 +17,15 @@ export default class Panden extends Component {
 
   render() {
     return(
-      <Pand title='Pand titel 1' status={0} />
+      <section className='app-page'>
+        <select className='app-select-filter' name='genre' id='genre'>
+          <option value=''>Filter op genre</option>
+          <option value='techno'>Techno</option>
+          <option value='deephouse'>Deep House</option>
+        </select>
+        <Pand title='Devine Takeover' status='live' />
+        <Pand title='Pauls Boutique' status='live' />
+      </section>
     );
   }
 }

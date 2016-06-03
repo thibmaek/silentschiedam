@@ -12,14 +12,16 @@ module.exports = [
   {
     method: 'GET',
     path: '/login',
-    handler: (req, reply) => reply.view('login', {
+    handler: (req, reply) => reply.view('generic', {
       title: 'Login'
     })
   },
   {
     method: 'GET',
-    path: '/logout',
-    handler: (req, reply) => reply.view('index')
+    path: '/detail/1',
+    handler: (req, reply) => reply.view('generic', {
+      title: 'Detail'
+    })
   }
 
 ];

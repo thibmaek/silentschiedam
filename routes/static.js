@@ -12,6 +12,11 @@ module.exports = [
         index: true
       }
     }
+  },
+  {
+    method: 'GET',
+    path: '/logout',
+    handler: (req, reply) => console.log(reply)
   }
 
 ];

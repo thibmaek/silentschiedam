@@ -1,6 +1,6 @@
 import React from 'react';
 import {Router, Route, browserHistory} from 'react-router';
-import {Home, Login} from '../pages/';
+import {Home, Login, Detail} from '../pages/';
 
 import {Auth} from '../config/firebase';
 
@@ -20,6 +20,7 @@ const logout = (nextState, replace) => {
 export default (
   <Router history={browserHistory}>
     <Route path='/' component={Home} onEnter={isLoggedIn} />
+    <Route path='/detail/:id' component={Detail} />
     <Route path='/login' component={Login} />
     <Route path='/logout' onEnter={logout} />
   </Router>
