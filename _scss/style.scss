@@ -75,6 +75,10 @@ body {
 }
 
 .app-top-nav {
+  position: absolute;
+  width: 100vw;
+  margin-top: 1rem;
+  z-index: 3;
   align-items: center;
   display: flex;
   justify-content: space-between;
@@ -111,7 +115,7 @@ body {
   display: block;
   height: auto;
   margin: 0 auto;
-  margin-top: 1rem;
+  margin-top: 3rem;
   position: relative;
   width: 50vw;
   z-index: 2;
@@ -128,7 +132,7 @@ body {
 }
 
 .app-header-illustratie {
-  margin-bottom: -5rem;
+  margin-bottom: -7rem;
   margin-top: -3rem;
   width: 100%;
 }
