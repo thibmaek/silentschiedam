@@ -15,6 +15,11 @@ module.exports = [
     handler: (req, reply) => reply.view('login', {
       title: 'Login'
     })
+  },
+  {
+    method: 'GET',
+    path: '/logout',
+    handler: (req, reply) => reply.view('index')
   }
 
 ];

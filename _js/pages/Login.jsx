@@ -5,14 +5,15 @@ import {Auth} from '../config/firebase';
 export default class Login extends Component {
   constructor(props, context) {
     super(props, context);
+    console.log(`sessionStorage: ${sessionStorage.getItem('uid')}`);
   }
 
   componentWillMount() {
     Auth.onAuthStateChanged(user => {
-      this.setState({
-        auth: (user) ? true : false
-      });
+      if(user) sessionStorage.setItem('uid', user.uid);
+      console.log(`Auth State changed to authenticated for ${user.displayName}`);
     });
+    // Auth.getRedirectResult().then(result => console.log(result.user));
   }
 
   fbLogin() {

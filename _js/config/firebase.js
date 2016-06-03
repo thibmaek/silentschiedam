@@ -12,7 +12,7 @@ Firebase.initializeApp(config);
 
 const Database = Firebase.database();
 const Auth = Firebase.auth();
-const Storage = Firebase.storage().ref;
+const Storage = Firebase.storage().ref();
 
 const Livestreams = Storage.child('livestreams');
 
