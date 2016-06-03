@@ -1,33 +1,371 @@
 @import 'reset';
 
-html {
-  font-size: 62.5%;
-  font-family: 'Helvetica neue', Helvetica, Arial, sans-serif;
+@import 'util/vars';
+
+@import 'partials/mqueries';
+
+* {
+  box-sizing: border-box;
 }
 
 body {
-  font-size: 1.8rem;
+  font-family: $mainfont;
+  font-size: 1.6em;
+}
+
+p {
+  font-size: 2rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-family: $slabfont;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.site {
+  align-items: center;
+  background: linear-gradient(to bottom, $donkerblauw 0%, $lichtblauw 100%);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  height: 100%;
+  justify-content: center;
 }
 
-main {
-  width: 100%;
-  padding: 3rem;
-  max-width: 96rem;
+.app {
+  background-color: $lichtgrijs;
+  display: none;
 }
 
-h1 {
-  font-size: 3rem;
+.app-header {
+  background: linear-gradient(to bottom, $donkerblauw 0%, $lichtblauw 100%);
+  background: url('../public/assets/img/header.png') no-repeat;
+  background-size: cover;
+  bottom: 0;
+  display: block;
+  margin-left: -.1rem;
+  max-height: 40rem;
+  overflow: hidden;
+  padding-top: 3rem;
+  z-index: 1;
 }
 
-nav {
+.app-detail-header {
+  height: 40rem;
+}
+
+.app-detail-imgwrap {
   display: flex;
-  width: 100%;
-  height: 50px;
+  justify-content: center;
+  margin-left: -50vw;
+  width: 200vw;
+}
 
-  ul {
-    align-items: flex-cente;
+.app-detail-headerimg {
+  position: relative;
+  z-index: 2;
+}
+
+.app-top-nav {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  top: 0;
+
+  a {
+    align-items: center;
+    color: $white;
+    display: flex;
+    font-family: $slabfont;
+    font-size: 3rem;
+    padding: 0 3rem;
+    text-decoration: none;
+
+    em {
+      font-size: 1.7rem;
+      margin-left: 1rem;
+    }
+  }
+}
+
+.app-detail-topnav {
+  margin-bottom: 2rem;
+}
+
+.app-wieken {
+  margin-left: 0;
+  margin-top: -50vw;
+  position: relative;
+  width: 43vw;
+}
+
+.app-logo {
+  display: block;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 1rem;
+  position: relative;
+  width: 50vw;
+  z-index: 2;
+}
+
+.app-logo-nav {
+  display: block;
+  height: auto;
+  margin: 0 auto;
+  margin-bottom: -8rem;
+  position: relative;
+  width: 20rem;
+  z-index: 3;
+}
+
+.app-header-illustratie {
+  margin-bottom: -5rem;
+  margin-top: -3rem;
+  width: 100%;
+}
+
+.app-navbar {
+  align-items: center;
+  background: linear-gradient(to bottom, $donkerrood 0%, $lichtrood 100%);
+  border-bottom: 1rem solid $lichtgrijs-2;
+  display: flex;
+  height: 8rem;
+  justify-content: space-around;
+  margin-top: -1rem;
+  position: relative;
+  width: 100vw;
+  z-index: 2;
+}
+
+.app-nav-item {
+  a {
+    align-items: center;
+    color: $white;
+    display: flex;
+    font-family: $slabfont;
+    font-size: 2rem;
+    font-weight: 400;
+    text-decoration: none;
+  }
+
+  i {
+    font-size: 3.5rem;
+    margin-right: 1rem;
+  }
+}
+
+.app-nav-active {
+  background: url('../public/assets/svg/select-arrow.svg') no-repeat;
+  background-size: contain;
+  display: none;
+  height: 2rem;
+  margin-left: 4rem;
+  margin-top: 1.7rem;
+  position: absolute;
+  width: 2rem;
+}
+
+.app-detail-title {
+  margin-top: -11rem;
+  position: relative;
+  z-index: 3;
+
+  h1 {
+    background-color: $white;
+    color: $black;
+    display: inline-block;
+    font-family: $slabfont;
+    font-size: 3rem;
+    font-weight: 700;
+    padding: 1rem;
+  }
+}
+
+.active {display: block;}
+
+.app-audio-control {
+  align-items: center;
+  background: linear-gradient(to bottom, $donkerrood 0%, $lichtrood 100%);
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  height: 15rem;
+  justify-content: center;
+  position: absolute;
+  right: 2rem;
+  top: 15rem;
+  z-index: 4;
+
+  i {
+    color: $white;
+    font-size: 6rem;
+  }
+}
+
+.app-page {
+  background-color: $lichtgrijs;
+  padding: 2rem 0 3rem;
+}
+
+.app-page-text {
+  padding: 0 2rem;
+}
+
+.app-select-filter {
+  appearance: none;
+  background: url('../public/assets/svg/select-arrow.svg') 96% / 15% no-repeat $white;
+  background-size: 2rem;
+  border: 0;
+  border-radius: 0;
+  box-shadow: 10px 10px 0 $lichtgrijs-2;
+  color: $donkerrood;
+  display: block;
+  font-size: 2rem;
+  height: 5rem;
+  margin: 0 auto 3rem;
+  padding: 0 0 0 2rem;
+  width: 80%;
+}
+
+.app-pand {
+  background-color: $white;
+  margin-bottom: 2rem;
+
+  header {
+    align-items: center;
+    display: flex;
+    font-family: $slabfont;
+    font-size: 2rem;
+    font-weight: 700;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+
+  aside {
+    color: $lichtgrijs;
+    font-family: $mainfont;
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+}
+
+.app-pand-img {
+  width: 100%;
+}
+
+.app-pand-overlay {
+  margin-top: -10rem;
+  z-index: 1;
+}
+
+.pause {
+  display: none;
+}
+
+.app-detail-rate {
+  align-items: center;
+  background: linear-gradient(to bottom, $donkerrood 0%, $lichtrood 100%);
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  font-family: $slabfont;
+  font-size: 2.5rem;
+  height: 20rem;
+  justify-content: center;
+}
+
+.app-sterren {
+  font-size: 4rem;
+  margin-top: 1rem;
+}
+
+.app-input-request {
+  appearance: none;
+  border: 0;
+  border-radius: 0;
+  box-shadow: 10px 10px 0 $lichtgrijs-2;
+  color: $donkerrood;
+  display: block;
+  font-size: 2rem;
+  height: 5rem;
+  margin: 0 auto 3rem;
+  padding: 0 0 0 2rem;
+  width: 80%;
+}
+
+::-webkit-input-placeholder {color: $lichtblauw;}
+
+.app-request-submit {
+  appearance: none;
+  background-color: $white;
+  border: 0;
+  border-image: linear-gradient(to bottom, $donkerblauw, $lichtblauw) 1 100%;
+  border-style: solid;
+  border-width: 3px;
+  color: $lichtblauw;
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 auto 3rem;
+  padding: 1rem 4rem;
+}
+
+.app-verzoek {
+  align-items: center;
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  margin-top: 9rem;
+  padding: 2rem;
+}
+
+.app-verzoek-profo {
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  margin-top: -8rem;
+  max-width: 10rem;
+}
+
+.app-verzoek-meta {
+  color: $gray;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.app-verzoek-inzending {
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+  justify-content: center;
+  text-align: center;
+
+  p {
+    line-height: 1.5;
+    margin-bottom: 0;
+  }
+}
+
+.app-verzoek-like {
+  color: $lichtrood;
+  font-family: $slabfont;
+  font-size: 2rem;
+  margin-top: 1rem;
+
+  span {
+    color: $lichtblauw;
+    display: inline-block;
+    margin-left: 2rem;
   }
 }

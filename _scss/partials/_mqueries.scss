@@ -1,0 +1,84 @@
+@media only screen and (max-width: 1334px){
+
+}
+
+@media only screen and (max-width: 620px){
+  .site {
+    display: none;
+  }
+  .app {
+    display: block;
+  }
+  .app-navbar {
+    margin-top: -3rem;
+  }
+  .app-detail-title {
+    margin-top: -11rem;
+  }
+}
+
+@media only screen and (max-width: 550px){
+  .app-header-illustratie {
+    margin-bottom: -4.5rem;
+  }
+  .app-navbar {
+    margin-top: -2rem;
+  }
+  .app-detail-title {
+    margin-top: -10rem;
+  }
+}
+
+@media only screen and (max-width: 420px){
+  .app-navbar {
+    margin-top: -1rem;
+  }
+  .app-logo-nav {
+    width: 15rem;
+    margin-bottom: -8rem;
+  }
+  .app-detail-title {
+    margin-top: -7rem;
+  }
+}
+
+@media only screen and (max-width: 350px){
+  .app-nav-active {
+    margin-top: 1.5rem;
+  }
+  .app-nav-item {
+    a {
+      font-size: 1.5rem;
+      font-weight: 400;
+    }
+  }
+  p {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  .app-detail-title {
+    margin-top: -6rem;
+
+    h1 {
+      font-size: 2rem;
+    }
+  }
+  .app-audio-control {
+    width: 13rem;
+    height: 13rem;
+
+    i {
+      font-size: 4rem;
+      color: white;
+    }
+  }
+}
+
+@media only screen and (max-width: 350px){
+  .app-logo-nav {
+    width: 10rem;
+    margin-bottom: -6rem;
+  }
+}

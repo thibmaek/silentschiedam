@@ -8,18 +8,22 @@ export default class Pand extends Component {
 
   static propTypes = {
     title: PropTypes.string,
-    status: PropTypes.number
+    status: PropTypes.string
   };
 
   render() {
     let {title, status} = this.props;
 
     return(
-      <article>
+      <article className='app-pand'>
         <header>
-          <h2>{title}</h2>
-          <span className='fa fa-circle'>{status}</span>
+          {title}
+          <aside><img src='/assets/svg/icon-live.svg' alt='Live' width='10' /> {status}</aside>
         </header>
+        <div className='app-pand-img-wrap'>
+          <a href='/detail/1'><img className='app-pand-img' src='/assets/img/pand.jpg' alt='Devine Takeover' /></a>
+          <img className='app-pand-overlay' src='assets/svg/pand-overlay.svg' alt='Deunen' />
+        </div>
       </article>
     );
   }

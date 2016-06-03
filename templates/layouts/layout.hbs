@@ -1,21 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='nl'>
 <head>
-	<meta charset="UTF-8">
+	<meta charset='UTF-8'>
 	<title>{{title}}</title>
   {{{_sections.head}}}
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <link rel="stylesheet" type="text/css" href="/css/style.css"/>
+  <meta name='viewport' content='width=device-width, initial-scale=1'/>
+	<meta name='apple-mobile-web-app-capable' content='yes'>
+	<meta name='apple-mobile-web-app-status-bar-style' content='black-translucent'>
+	<!-- Icons -->
+	<link rel='apple-touch-icon' sizes='57x57' href='img/icons/apple-touch-icon-57x57.png'>
+	<link rel='apple-touch-icon' sizes='60x60' href='img/icons/apple-touch-icon-60x60.png'>
+	<link rel='apple-touch-icon' sizes='72x72' href='img/icons/apple-touch-icon-72x72.png'>
+	<link rel='apple-touch-icon' sizes='76x76' href='img/icons/apple-touch-icon-76x76.png'>
+	<link rel='apple-touch-icon' sizes='114x114' href='img/icons/apple-touch-icon-114x114.png'>
+	<link rel='apple-touch-icon' sizes='120x120' href='img/icons/apple-touch-icon-120x120.png'>
+	<link rel='apple-touch-icon' sizes='144x144' href='img/icons/apple-touch-icon-144x144.png'>
+	<link rel='apple-touch-icon' sizes='152x152' href='img/icons/apple-touch-icon-152x152.png'>
+	<link rel='apple-touch-icon' sizes='180x180' href='img/icons/apple-touch-icon-180x180.png'>
+	<link rel='icon' type='image/png' href='img/icons/favicon-32x32.png' sizes='32x32'>
+	<link rel='icon' type='image/png' href='img/icons/favicon-96x96.png' sizes='96x96'>
+	<link rel='icon' type='image/png' href='img/icons/favicon-16x16.png' sizes='16x16'>
+	<link rel='icon' type='image/png' href='img/icons/android-chrome-192x192.png' sizes='192x192'>
+	<meta name='msapplication-TileImage' content='img/icons/mstile-144x144.png'>
+	<!-- Styles -->
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" media="screen">
+  <link rel='stylesheet' type='text/css' href='/css/style.css'/>
+	<!-- WFLoader -->
+	<script type='text/javascript'>
+  WebFontConfig = {google:{families:[ 'Roboto+Slab:400,700:latin' ]}};
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })();
+	</script>
 </head>
 <body>
-	<nav>
-		<ul>
-			<li class='fa fa-bars'></li>
-			<li class='fa fa-user'></li>
-		</ul>
+	<nav class='app-top-nav'>
+		<a href='#'><i class='fa fa-calendar-o' aria-hidden='true'></i><em>1 juli 2016</em></a>
+		<a href='#'><i class='fa fa-user' aria-hidden='true'></i></a>
 	</nav>
   {{{content}}}
-  <script src="/js/script.js"></script>
+  <script src='/js/script.js'></script>
   {{{_sections.scripts}}}
 </body>
 </html>
