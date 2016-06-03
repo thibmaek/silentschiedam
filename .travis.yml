@@ -1,15 +1,15 @@
 language: node_js
 node_js:
-  - "6"
-  - "5"
-
+- '6'
+- '5'
 deploy:
   provider: heroku
   api_key:
-    secure: "e14b5853-beb7-4c92-8d03-46abb15b2a54"
+    secure: KSdEVbCnp0ds5BNhagX+zreVuWsdIlLNSA/WauYaM5CidONmxG9iyC9RrKl8Y8+rI7Do8X1sA9ElUEMCke7U/0dAW3tp6QV2P88s/ELTjm68dI0OJu6dU9mm55Jb5atGf8u3+UZT1UuhipmUV7XjzIJ/mOQa6WSGEJC9PQa/5LvgS3YHtyjafH/0KDMdDACmDLMx/z4lXpQ005aq9Rnl5pyfk2GL74nVIgRRm/tA4nNVZXbFahKMwpaA5x2EOhCFnYhNEaRwUFj8pGDsDNoN23DidPoimsTOf+ys3jR7OACuns0r3h2bDH1AppepGP2psil+n6NFcr/76Yvvlji2wp12BToRIBMC4MvZv/BEzh0NKg32+Det4SqSqhBwiOcd2Vc+htpvCE7OxnfqWTYWY+10M3LeLVbGxXn3XKcB1RB0xAEfDLEXf1n2/cZ9uvgfk66gTL38tdO2SKShmHJVF/kLq94zkWc71cu+cirJtOEbwhtMPgIIPptGZUcD4PQaxi12ks4oDJgvmfrxsXcc70/2Ox+OXQeN5jaPeBRqyGnjEU2mAGypjeZhDGilYQCMhVv3NQP+cRmhyXaFwj313gdLLykp1tblWiNPdppqAZtkuZWLTr4eKEZS2JbCf9w0pSou+w78gg5Cq8ibPepQfNf0fz1yF5GUDJT1zCbsaFk=
   app:
     master: silentschiedam
     develop: silentschiedam-staging
-
+  on:
+    repo: thibmaek/2DEV2_maekelberghThibault_MAIV
 notifications:
   slack: majorivrotterdam:rNokpui6Cyw8TJsjqDhG8Nch
