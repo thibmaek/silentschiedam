@@ -61,6 +61,28 @@ main {
   display: block;
 }
 
+.app-login-container h2 {
+  margin-left: 1rem;
+}
+
+.login-button-facebook {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #3b5998;
+  border: 0;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 1.6em;
+  margin: 2rem auto;
+  padding: .5rem;
+  width: 80%;
+}
+
+.login-button-facebook i {
+  padding-right: 1rem;
+}
+
 @media only screen and (max-width: 1000px) {
   .site-stappen {
     width: 100%;
@@ -231,17 +253,17 @@ body {
 }
 
 .app-top-nav {
-  position: absolute;
-  width: 100vw;
-  margin-top: 1rem;
-  z-index: 3;
   -ms-flex-align: center;
   align-items: center;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  margin-top: 1rem;
+  position: absolute;
   top: 0;
+  width: 100vw;
+  z-index: 3;
 }
 
 .app-top-nav a {
@@ -566,15 +588,15 @@ body {
 }
 
 .molen-draai-img {
-  display: block;
-  position: absolute;
-  margin-top: -50vw;
-  margin-left: -7vw;
-  width: 40vw;
   animation: example;
   animation-duration: 8s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
+  display: block;
+  margin-left: -7vw;
+  margin-top: -50vw;
+  position: absolute;
+  width: 40vw;
 }
 
 .molen-base {
@@ -601,10 +623,10 @@ body {
 }
 
 .molen-pos-two {
-  margin-top: -39vw;
-  margin-left: 30vw;
-  transform: scale(0.6);
   filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur stdDeviation="1" /></filter></svg>#filter');
   -webkit-filter: blur(1px);
   filter: blur(1px);
+  margin-left: 30vw;
+  margin-top: -39vw;
+  transform: scale(0.6);
 }

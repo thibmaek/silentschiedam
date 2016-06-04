@@ -2,6 +2,7 @@
 
 @import 'util/vars';
 
+@import 'partials/login';
 @import 'partials/mqueries';
 
 * {
@@ -75,14 +76,14 @@ body {
 }
 
 .app-top-nav {
-  position: absolute;
-  width: 100vw;
-  margin-top: 1rem;
-  z-index: 3;
   align-items: center;
   display: flex;
   justify-content: space-between;
+  margin-top: 1rem;
+  position: absolute;
   top: 0;
+  width: 100vw;
+  z-index: 3;
 
   a {
     align-items: center;
@@ -375,15 +376,15 @@ body {
 }
 
 .molen-draai-img {
-  display: block;
-  position: absolute;
-  margin-top: -50vw;
-  margin-left: -7vw;
-  width: 40vw;
   animation: example;
   animation-duration: 8s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
+  display: block;
+  margin-left: -7vw;
+  margin-top: -50vw;
+  position: absolute;
+  width: 40vw;
 }
 
 .molen-base {
@@ -402,12 +403,12 @@ body {
 .molen-pos-one {
   margin-left: 5rem;
   position: relative;
-  z-index:2;
+  z-index: 2;
 }
 
 .molen-pos-two {
-  margin-top: -39vw;
-  margin-left: 30vw;
-  transform: scale(.6);
   filter: blur(1px);
+  margin-left: 30vw;
+  margin-top: -39vw;
+  transform: scale(.6);
 }

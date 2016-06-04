@@ -1,9 +1,3 @@
-// some features need the be polyfilled..
-// https://babeljs.io/docs/usage/polyfill/
-
-// import 'babel-core/polyfill';
-// or import specific polyfills
-// import {$} from './helpers/util';
 import ReactDOM from 'react-dom';
 import router from './router/';
 import fetch from 'isomorphic-fetch';
@@ -12,11 +6,7 @@ let draai = document.querySelectorAll('.molen-draai-img');
 
 const init = () => {
   ReactDOM.render(router, document.querySelector('main'));
-
-  if(draai){
-    load();
-  }
-
+  if(draai) load();
 };
 
 const load = () => {

@@ -4,7 +4,7 @@ module.exports = [
 
   {
     method: 'GET',
-    path: '/',
+    path: '/home',
     handler: (req, reply) => reply.view('index', {
       title: 'Silent Schiedam'
     })
@@ -19,7 +19,7 @@ module.exports = [
   {
     method: 'GET',
     path: '/detail/1',
-    handler: (req, reply) => reply.view('generic', {
+    handler: (req, reply) => reply.view('detail', {
       title: 'Detail'
     })
   }
