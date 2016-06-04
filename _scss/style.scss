@@ -118,7 +118,7 @@ body {
   margin-top: 3rem;
   position: relative;
   width: 50vw;
-  z-index: 2;
+  z-index: 3;
 }
 
 .app-logo-nav {
@@ -372,4 +372,42 @@ body {
     display: inline-block;
     margin-left: 2rem;
   }
+}
+
+.molen-draai-img {
+  display: block;
+  position: absolute;
+  margin-top: -50vw;
+  margin-left: -7vw;
+  width: 40vw;
+  animation: example;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.molen-base {
+  margin-top: 20rem;
+}
+
+.molen-base-img {
+  width: 30vw;
+}
+
+@keyframes example {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+
+.molen-pos-one {
+  margin-left: 5rem;
+  position: relative;
+  z-index:2;
+}
+
+.molen-pos-two {
+  margin-top: -39vw;
+  margin-left: 30vw;
+  transform: scale(.6);
+  filter: blur(1px);
 }

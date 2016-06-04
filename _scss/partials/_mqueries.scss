@@ -1,5 +1,15 @@
-@media only screen and (max-width: 1334px){
 
+@media only screen and (max-width: 1000px){
+  .site-stappen {
+    width: 100%;
+  }
+  .stap {
+    width: 25vw;
+    margin-bottom: 2rem;
+  }
+  .site-logo {
+    width: 50%;
+  }
 }
 
 @media only screen and (max-width: 620px){
@@ -22,7 +32,7 @@
     margin-bottom: -4.5rem;
   }
   .app-navbar {
-    margin-top: -2rem;
+    margin-top: -3rem;
   }
   .app-detail-title {
     margin-top: -10rem;
@@ -31,7 +41,7 @@
 
 @media only screen and (max-width: 420px){
   .app-navbar {
-    margin-top: -1rem;
+    margin-top: -2rem;
   }
   .app-logo-nav {
     width: 15rem;
@@ -74,11 +84,14 @@
       color: white;
     }
   }
-}
-
-@media only screen and (max-width: 350px){
   .app-logo-nav {
     width: 10rem;
     margin-bottom: -6rem;
+  }
+}
+
+@media only screen and (max-width: 320px){
+  .app-navbar {
+    margin-top: -0.5rem;
   }
 }
