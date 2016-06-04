@@ -1,31 +1,42 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {Pand} from '.';
 
-import {Database} from '../config/firebase';
+export default ({panden}) => {
+  return(
+    <section className='app-page'>
+      <select className='app-select-filter' name='genre' id='genre'>
+        <option value=''>Filter op genre</option>
+        <option value='techno'>Techno</option>
+        <option value='deephouse'>Deep House</option>
+      </select>
+      {panden.map(pand => <Pand key={pand.key} {...pand} />)}
+    </section>
+  );
+};
 
-export default class Panden extends Component {
-  constructor(props, context) {
-    super(props, context);
-    this.state = {};
-  }
+// CODE IS IN COMMENT BELOW TO DECIDE WHAT IS THE BEST APPROACH (FUNCTION VS CLASS)
 
-  componentWillMount() {
-    Database.ref('panden/').on('value', snapshot => {
-      console.log(snapshot.val());
-    });
-  }
-
-  render() {
-    return(
-      <section className='app-page'>
-        <select className='app-select-filter' name='genre' id='genre'>
-          <option value=''>Filter op genre</option>
-          <option value='techno'>Techno</option>
-          <option value='deephouse'>Deep House</option>
-        </select>
-        <Pand title='Devine Takeover' status='live' />
-        <Pand title='Pauls Boutique' status='live' />
-      </section>
-    );
-  }
-}
+// export default class Panden extends Component {
+//   constructor(props, context) {
+//     super(props, context);
+//   }
+//
+//   static propTypes = {
+//     panden: PropTypes.object.isRequired
+//   }
+//
+//   render() {
+//     let {panden} = this.props;
+//
+//     return(
+//       <section className='app-page'>
+//         <select className='app-select-filter' name='genre' id='genre'>
+//           <option value=''>Filter op genre</option>
+//           <option value='techno'>Techno</option>
+//           <option value='deephouse'>Deep House</option>
+//         </select>
+//         {panden.map(pand => <Pand key={pand.id} {...pand} />)}
+//       </section>
+//     );
+//   }
+// }

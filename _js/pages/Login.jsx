@@ -5,15 +5,13 @@ import {Auth} from '../config/firebase';
 export default class Login extends Component {
   constructor(props, context) {
     super(props, context);
-    console.log(`sessionStorage: ${sessionStorage.getItem('uid')}`);
   }
 
   componentWillMount() {
     Auth.onAuthStateChanged(user => {
       if(user) sessionStorage.setItem('uid', user.uid);
-      console.log(`Auth State changed to authenticated for ${user.displayName}`);
+      console.log(`Auth State changed to authenticated for ${user.displayName} with uid: ${user.uid}`);
     });
-    // Auth.getRedirectResult().then(result => console.log(result.user));
   }
 
   fbLogin() {
@@ -23,9 +21,12 @@ export default class Login extends Component {
 
   render() {
     return(
-      <section>
-        <h1>Log in om verder te gaan</h1>
-        <button onClick={this.fbLogin}>Sign in with Facebook</button>
+      <section className='app-login-container'>
+        <h2>Log in om verder te gaan</h2>
+        <button className='login-button-facebook' onClick={this.fbLogin}>
+        <i className='fa fa-facebook-official' aria-hidden='true'></i>
+           Inloggen
+        </button>
       </section>
     );
   }

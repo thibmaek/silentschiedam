@@ -1,3 +1,4 @@
-export const basename = (() => {
-  return `${window.location.hostname}:${window.location.port}`;
-})();
+export const clear = () => {
+  sessionStorage.removeItem('uid');
+  return !sessionStorage.getItem('uid');
+};
