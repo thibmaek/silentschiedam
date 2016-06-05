@@ -1,7 +1,7 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import {Pand} from '.';
 
-export default ({panden}) => {
+const Panden = ({panden}) => {
   return(
     <section className='app-page'>
       <select className='app-select-filter' name='genre' id='genre'>
@@ -14,29 +14,8 @@ export default ({panden}) => {
   );
 };
 
-// CODE IS IN COMMENT BELOW TO DECIDE WHAT IS THE BEST APPROACH (FUNCTION VS CLASS)
+Panden.propTypes = {
+  panden: PropTypes.array.isRequired
+};
 
-// export default class Panden extends Component {
-//   constructor(props, context) {
-//     super(props, context);
-//   }
-//
-//   static propTypes = {
-//     panden: PropTypes.object.isRequired
-//   }
-//
-//   render() {
-//     let {panden} = this.props;
-//
-//     return(
-//       <section className='app-page'>
-//         <select className='app-select-filter' name='genre' id='genre'>
-//           <option value=''>Filter op genre</option>
-//           <option value='techno'>Techno</option>
-//           <option value='deephouse'>Deep House</option>
-//         </select>
-//         {panden.map(pand => <Pand key={pand.id} {...pand} />)}
-//       </section>
-//     );
-//   }
-// }
+export default Panden;

@@ -1,21 +1,17 @@
-import React, {Component, PropTypes} from 'react';
+import React, {PropTypes} from 'react';
 
-export default class App extends Component {
-  constructor(props, context){
-    super(props, context);
-  }
+const App = props => {
+  let {children} = props;
 
-  static propTypes = {
-    children: PropTypes.object
-  }
+  return (
+    <section className='app-container'>
+      {children}
+    </section>
+  );
+};
 
-  render() {
-    let {children} = this.props;
+App.propTypes = {
+  children: PropTypes.object.isRequired
+};
 
-    return (
-      <section className='app-container'>
-        {children}
-      </section>
-    );
-  }
-}
+export default App;
