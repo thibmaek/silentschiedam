@@ -9,7 +9,7 @@ export default ({panden}) => {
         <option value='techno'>Techno</option>
         <option value='deephouse'>Deep House</option>
       </select>
-      {panden.map(pand => <Pand key={pand.key} {...pand} />)}
+      {panden.map(pand => <Pand key={pand['.key']} {...pand} />)}
     </section>
   );
 };
