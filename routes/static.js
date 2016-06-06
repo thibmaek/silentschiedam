@@ -1,22 +1,47 @@
 'use strict';
 
 module.exports = [
-
   {
     method: 'GET',
     path: '/{param*}',
     handler: {
+      file: 'index.html'
+    }
+  },
+  {
+    method: 'GET',
+    path: '/css/{param*}',
+    handler: {
       directory: {
-        path: '.',
-        redirectToSlash: true,
-        index: true
+        path: './css'
       }
     }
   },
   {
     method: 'GET',
-    path: '/logout',
-    handler: (req, reply) => console.log(reply)
+    path: '/js/{param*}',
+    handler: {
+      directory: {
+        path: './js'
+      }
+    }
+  },
+  {
+    method: 'GET',
+    path: '/assets/{param*}',
+    handler: {
+      directory: {
+        path: './assets'
+      }
+    }
+  },
+  {
+    method: 'GET',
+    path: '/img/{param*}',
+    handler: {
+      directory: {
+        path: './img'
+      }
+    }
   }
-
 ];
