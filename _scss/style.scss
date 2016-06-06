@@ -10,6 +10,7 @@
 }
 
 body {
+  background-color: $lichtgrijs;
   font-family: $mainfont;
   font-size: 1.6em;
 }
@@ -373,6 +374,14 @@ body {
     display: inline-block;
     margin-left: 2rem;
   }
+}
+
+.app-tag {
+  background-color: $lichtrood;
+  color: $white;
+  margin: 1rem 0 0 1rem;
+  padding: 1rem;
+  position: absolute;
 }
 
 .molen-draai-img {

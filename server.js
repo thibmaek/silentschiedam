@@ -47,20 +47,6 @@ server.register({
 server.register(require('./plugins/'), pluginHandler);
 server.register(require('./routes/'), pluginHandler);
 
-server.views({
-  engines: {
-    hbs: require('handlebars')
-  },
-
-  relativeTo: `${__dirname}/templates`,
-  path: '.',
-
-  layout: true,
-
-  helpersPath: 'helpers',
-  layoutPath: 'layouts'
-});
-
 server.start(err => {
   if(err) console.error(err);
   console.log(`Server running at: http://localhost:${port}`);

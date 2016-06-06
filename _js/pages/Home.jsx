@@ -27,18 +27,33 @@ export default class Home extends Component {
     let {panden} = this.state;
 
     return(
-      <section className='app-home-container'>
-        <nav>
-          <ul className='app-navbar'>
-            <li className='app-nav-item'><a href='#'><i className='fa fa-home' aria-hidden='true'></i>Panden</a>
-            <div className='app-nav-active active'></div>
-            </li>
-            <li className='app-nav-item'><a href='/info'><i className='fa fa-info-circle' aria-hidden='true'></i>Informatie</a>
-            <div className='app-nav-active'></div></li>
-          </ul>
-        </nav>
-        <Panden panden={panden} />
-      </section>
+      <div>
+        <header className='app-header'>
+          <img className='app-logo' src='assets/svg/logo.svg' alt='Silent Schiedam' />
+          <div className='app-header-illustratie'>
+            <div className='molenbase molen-pos-one'>
+              <img src='assets/svg/base.svg' alt='' className='molen-base-img' />
+              <img src='assets/svg/draai.svg' alt='' className='molen-draai-img' />
+            </div>
+            <div className='molenbase molen-pos-two'>
+              <img src='assets/svg/base.svg' alt='' className='molen-base-img' />
+              <img src='assets/svg/draai.svg' alt='' className='molen-draai-img' />
+            </div>
+          </div>
+        </header>
+        <section className='app-home-container'>
+          <nav>
+            <ul className='app-navbar'>
+              <li className='app-nav-item'><a href='#'><i className='fa fa-home' aria-hidden='true'></i>Panden</a>
+              <div className='app-nav-active active'></div>
+              </li>
+              <li className='app-nav-item'><a href='/info'><i className='fa fa-info-circle' aria-hidden='true'></i>Informatie</a>
+              <div className='app-nav-active'></div></li>
+            </ul>
+          </nav>
+          <Panden panden={panden} />
+        </section>
+      </div>
     );
   }
 }
