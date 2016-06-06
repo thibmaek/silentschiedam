@@ -10,16 +10,18 @@ export default class Pand extends Component {
   static propTypes = {
     naam: PropTypes.string.isRequired,
     status: PropTypes.string.isRequired,
-    imgUrl: PropTypes.string.isRequired
+    imgUrl: PropTypes.string.isRequired,
+    genre: PropTypes.string.isRequired
   };
 
   static defaultProps =  {
     status: 'scheduled',
-    imgUrl: 'pandplaceholder.jpg'
+    imgUrl: 'pandplaceholder.jpg',
+    genre: 'Onbekend'
   }
 
   render() {
-    let {naam, status, imgUrl} = this.props;
+    let {naam, status, imgUrl, genre} = this.props;
 
     return(
       <article className='app-pand'>
@@ -28,7 +30,7 @@ export default class Pand extends Component {
           <aside><img src={`/assets/svg/icon-${status}.svg`} alt={status} width='10' /> {status}</aside>
         </header>
         <div className='app-pand-img-wrap'>
-          <aside className='app-tag'>#MuziekGenre</aside>
+          <aside className='app-tag'>#{genre}</aside>
           <Link to=''>
             <img className='app-pand-img' src={`/assets/img/${imgUrl}`} alt='Devine Takeover' />
           </Link>
