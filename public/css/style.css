@@ -63,6 +63,7 @@ main {
 
 .app-login-container {
   padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .app-login-container h2 {
@@ -75,7 +76,7 @@ main {
   color: #fff;
   display: block;
   font-size: 1.6em;
-  margin: 1rem auto;
+  margin: 1rem auto 2rem;
   padding: .5rem;
   width: 80%;
 }
