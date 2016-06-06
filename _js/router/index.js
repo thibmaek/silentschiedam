@@ -3,7 +3,6 @@ import {Router, Route, IndexRedirect, browserHistory} from 'react-router';
 import {App, Home, Login, Detail} from '../pages/';
 
 import {Auth} from '../config/firebase';
-import {clear} from '../config/globals';
 const uid = sessionStorage.getItem('uid');
 
 const isLoggedIn = (nextState, replace) => {
@@ -13,7 +12,11 @@ const isLoggedIn = (nextState, replace) => {
 
 const logout = (nextState, replace) => {
   Auth.signOut()
-    .then(() => {if (clear) replace({pathname: '/login'});})
+    .then(() => {
+      sessionStorage.removeItem('uid');
+      window.location = `http://${window.location.hostname}:${window.location.port}/login`;
+      // replace({pathname: '/login'});
+    })
     .catch(err => console.log(err));
 };
 
@@ -23,7 +26,7 @@ export default (
       <IndexRedirect to='/home' />
       <Route path='/home' component={Home} onEnter={isLoggedIn} />
       <Route path='/detail/:id' component={Detail} />
-      <Route path='/login' component={Login} />
+      <Route path='/login' component={Login}  />
       <Route path='/logout' onEnter={logout} />
     </Route>
   </Router>
