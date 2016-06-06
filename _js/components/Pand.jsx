@@ -28,6 +28,7 @@ export default class Pand extends Component {
           <aside><img src={`/assets/svg/icon-${status}.svg`} alt={status} width='10' /> {status}</aside>
         </header>
         <div className='app-pand-img-wrap'>
+          <aside className='app-tag'>#MuziekGenre</aside>
           <Link to=''>
             <img className='app-pand-img' src={`/assets/img/${imgUrl}`} alt='Devine Takeover' />
           </Link>

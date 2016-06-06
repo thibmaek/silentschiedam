@@ -375,6 +375,14 @@ body {
   }
 }
 
+.app-tag {
+  background-color: $lichtrood;
+  color: $wit;
+  margin: 1rem 0 0 1rem;
+  padding: 1rem;
+  position: absolute;
+}
+
 .molen-draai-img {
   animation: example;
   animation-duration: 8s;
