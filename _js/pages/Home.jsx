@@ -40,7 +40,7 @@ export default class Home extends Component {
         <section className='app-home-container'>
           <nav>
             <ul className='app-navbar'>
-              <li className='app-nav-item'><a href='#'><i className='fa fa-home' aria-hidden='true'></i>Panden</a>
+              <li className='app-nav-item'><a href='/home'><i className='fa fa-home' aria-hidden='true'></i>Panden</a>
               <div className='app-nav-active active'></div>
               </li>
               <li className='app-nav-item'><a href='/info'><i className='fa fa-info-circle' aria-hidden='true'></i>Informatie</a>
