@@ -11,3 +11,5 @@ node_modules
 
 # OS Files
 .DS_Store
+
+public/js/script.js
