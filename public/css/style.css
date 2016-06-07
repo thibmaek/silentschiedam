@@ -262,7 +262,7 @@ body {
   display: flex;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin-top: 1rem;
+  margin-top: 2.5rem;
   position: absolute;
   top: 0;
   width: 100vw;
