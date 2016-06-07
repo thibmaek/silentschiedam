@@ -35,6 +35,7 @@ export default class Home extends Component {
               <img src='assets/svg/draai.svg' alt='' className='molen-draai-img' />
             </div>
           </div>
+          <img className='app-pand-overlay nav-overlay' src='assets/svg/pand-overlay.svg' alt='Deunen' />
         </header>
         <section className='app-home-container'>
           <nav>

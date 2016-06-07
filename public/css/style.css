@@ -301,10 +301,10 @@ body {
   display: block;
   height: auto;
   margin: 0 auto;
-  margin-top: 3rem;
+  margin-top: 2rem;
   position: relative;
-  width: 50vw;
-  z-index: 3;
+  width: 60vw;
+  z-index: 4;
 }
 
 .app-logo-nav {
@@ -330,7 +330,7 @@ body {
   border-bottom: 1rem solid #e2e2e2;
   display: -ms-flexbox;
   display: flex;
-  height: 8rem;
+  height: 6rem;
   -ms-flex-pack: distribute;
   justify-content: space-around;
   margin-top: -1rem;
@@ -346,13 +346,13 @@ body {
   display: -ms-flexbox;
   display: flex;
   font-family: "Roboto Slab", serif;
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-weight: 400;
   text-decoration: none;
 }
 
 .app-nav-item i {
-  font-size: 3.5rem;
+  font-size: 3rem;
   margin-right: 1rem;
 }
 
@@ -362,9 +362,13 @@ body {
   display: none;
   height: 2rem;
   margin-left: 4rem;
-  margin-top: 1.7rem;
+  margin-top: 1rem;
   position: absolute;
   width: 2rem;
+}
+
+.detail-nav-active {
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjIuMSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAyMC40IDEzLjUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDIwLjQgMTMuNTsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOiMxREIwQzE7fQo8L3N0eWxlPgo8dGl0bGU+c2VsZWN0LWFycm93PC90aXRsZT4KPHBvbHlnb24gY2xhc3M9InN0MCIgcG9pbnRzPSIxMC4yLDEzLjUgNS4xLDYuNyAwLDAgMTAuMiwwIDIwLjQsMCAxNS4zLDYuNyAiLz4KPC9zdmc+Cg==) no-repeat;
 }
 
 .app-detail-title {
@@ -429,11 +433,25 @@ body {
   box-shadow: 10px 10px 0 #e2e2e2;
   color: #ce4348;
   display: block;
-  font-size: 2rem;
-  height: 5rem;
-  margin: 0 auto 3rem;
+  font-size: 1.5rem;
+  height: 3rem;
   padding: 0 0 0 2rem;
-  width: 80%;
+}
+
+.app-intro-top {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  padding: 0 3rem 1rem 0;
+}
+
+.app-intro-top h2 {
+  text-align: left;
+  margin-left: 2rem;
+  text-decoration: underline;
 }
 
 .app-pand {

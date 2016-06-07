@@ -4,11 +4,14 @@ import {Pand} from '.';
 const Panden = ({panden}) => {
   return(
     <section className='app-page'>
-      <select className='app-select-filter' name='genre' id='genre'>
-        <option value=''>Filter op genre</option>
-        <option value='techno'>Techno</option>
-        <option value='deephouse'>Deep House</option>
-      </select>
+    <div className='app-intro-top'>
+        <h2>Ontdek &amp; luister</h2>
+        <select className='app-select-filter' name='genre' id='genre'>
+          <option value=''>Genre</option>
+          <option value=''>Techno</option>
+          <option value=''>Deep House</option>
+        </select>
+      </div>
       {panden.map(pand => <Pand key={pand['.key']} {...pand} />)}
     </section>
   );
