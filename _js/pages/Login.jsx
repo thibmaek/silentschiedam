@@ -30,6 +30,8 @@ export default class Login extends Component {
   }
 
   render() {
+    let logoutIcon = document.querySelector('.fa-sign-out');
+    logoutIcon.style.display = 'none';
     return(
       <div>
         <header className='app-header'>
