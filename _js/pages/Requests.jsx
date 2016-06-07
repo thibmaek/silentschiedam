@@ -1,5 +1,5 @@
 import React, {Component, PropTypes} from 'react';
-import {PlayButton} from '../components';
+import {PlayButton, Request} from '../components';
 import {Database, Auth} from '../config/firebase';
 import {Link} from 'react-router';
 
@@ -46,7 +46,9 @@ export default class Detail extends Component {
 
   renderDetails() {
     let indexNav = document.querySelector('.index-nav-identifier');
-    if (indexNav) indexNav.style.display = 'none';
+    if (indexNav){
+      indexNav.style.display = 'none';
+    }
     if (this.state.details) {
       let {naam, info, djs, imgUrl, status, url, genre} = this.state.details;
       return(
