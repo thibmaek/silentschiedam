@@ -2,6 +2,7 @@ import React, {Component, PropTypes} from 'react';
 import firebase from 'firebase';
 import {PlayButton} from '../components';
 import {Database} from '../config/firebase';
+import {Link} from 'react-router';
 
 import {basename} from '../config/globals';
 
@@ -39,8 +40,8 @@ export default class Detail extends Component {
           <header className='app-header app-detail-header'>
             <img className='app-logo-nav' src={`${basename}/assets/svg/logo.svg`} alt='Silent Schiedam' />
             <nav className='app-top-nav app-detail-topnav'>
-              <a href='/'><i className='fa fa-arrow-left' aria-hidden='true'></i></a>
-              <a href='#'><i className='fa fa-user' aria-hidden='true'></i></a>
+              <Link to='/home'><i className='fa fa-arrow-left' aria-hidden='true'></i></Link>
+              <Link to='/profile'><i className='fa fa-user' aria-hidden='true'></i></Link>
             </nav>
             <PlayButton url={url} />
             <div className='app-detail-imgwrap'>

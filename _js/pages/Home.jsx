@@ -35,6 +35,11 @@ export default class Home extends Component {
   }
 
   render() {
+    let indexNav = document.querySelector('.index-nav-identifier');
+    if (indexNav){
+      indexNav.style.display = 'flex';
+    }
+
     let {panden} = this.state;
 
     return(
