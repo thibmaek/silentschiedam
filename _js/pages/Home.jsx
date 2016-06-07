@@ -39,6 +39,8 @@ export default class Home extends Component {
     if (indexNav){
       indexNav.style.display = 'flex';
     }
+    let logoutIcon = document.querySelector('.fa-sign-out');
+    logoutIcon.style.display = 'block';
 
     let {panden} = this.state;
 
