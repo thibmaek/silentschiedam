@@ -24,7 +24,12 @@ export default class Login extends Component {
   }
 
   fbLogin() {
-    let provider = new Firebase.auth.FacebookAuthProvider();
+    const provider = new Firebase.auth.FacebookAuthProvider();
+    Auth.signInWithRedirect(provider);
+  }
+
+  twitterLogin() {
+    const provider = new Firebase.auth.TwitterAuthProvider();
     Auth.signInWithRedirect(provider);
   }
 
@@ -53,7 +58,11 @@ export default class Login extends Component {
             <h2>Log in om verder te gaan</h2>
             <p>We hebben nog wat informatie nodig voor je kan genieten van de live-streams.</p>
             <button className='login-button-facebook' onClick={this.fbLogin}>
-            <i className='fa fa-facebook-official' aria-hidden='true'></i>
+              <i className='fa fa-facebook-official' aria-hidden='true'></i>
+               Inloggen
+            </button>
+            <button className='login-button-twitter' onClick={this.twitterLogin}>
+              <i className='fa fa-twitter' aria-hidden='true'></i>
                Inloggen
             </button>
           </article>

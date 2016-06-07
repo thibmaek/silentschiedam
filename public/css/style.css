@@ -126,6 +126,21 @@ main {
   padding-right: 1rem;
 }
 
+.login-button-twitter {
+  background-color: #55acee;
+  border: 0;
+  color: #fff;
+  display: block;
+  font-size: 1.6em;
+  margin: 1rem auto 2rem;
+  padding: .5rem;
+  width: 80%;
+}
+
+.login-button-twitter i {
+  padding-right: 1rem;
+}
+
 @media only screen and (max-width: 1000px) {
   .site-stappen {
     width: 100%;
