@@ -7,17 +7,15 @@ const uid = sessionStorage.getItem('uid');
 
 const isLoggedIn = (nextState, replace) => {
   if(!uid) replace({pathname: '/login'});
-  console.log(`The user is logged in with ${uid}`);
 };
 
-const logout = (nextState, replace) => {
+const logout = () => {
   Auth.signOut()
     .then(() => {
       sessionStorage.removeItem('uid');
-      window.location = `http://${window.location.hostname}:${window.location.port}/login`;
-      // replace({pathname: '/login'});
+      browserHistory.push('/login');
     })
-    .catch(err => console.log(err));
+    .catch(err => console.log('err', err));
 };
 
 export default (
