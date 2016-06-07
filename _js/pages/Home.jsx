@@ -3,7 +3,6 @@ import {Panden} from '../components/';
 
 import ReactFireMixin from 'reactfire';
 import reactMixin from 'react-mixin';
-
 import {Database} from '../config/firebase';
 
 export default class Home extends Component {
@@ -14,11 +13,7 @@ export default class Home extends Component {
     };
   }
 
-  componentDidMount() {
-    this.getPanden();
-  }
-
-  getPanden() {
+  componentWillMount() {
     const ref = Database.ref('panden/');
     this.bindAsArray(ref, 'panden');
   }

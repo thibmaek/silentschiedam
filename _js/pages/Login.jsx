@@ -1,14 +1,21 @@
-import React, {Component} from 'react';
+import React, {Component, PropTypes} from 'react';
 
 import Firebase from 'firebase';
 import {Auth} from '../config/firebase';
+const uid = sessionStorage.getItem('uid');
 
 export default class Login extends Component {
+  static contextTypes = {
+    router: PropTypes.object.isRequired
+  }
+
   constructor(props, context) {
     super(props, context);
   }
 
   componentWillMount() {
+    if (uid) this.context.router.push('/home');
+
     Auth.onAuthStateChanged(user => {
       if(user) sessionStorage.setItem('uid', user.uid);
       console.log(`Auth State changed to authenticated for ${user.displayName} with uid: ${user.uid}`);
