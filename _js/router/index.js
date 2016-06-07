@@ -9,11 +9,12 @@ const isLoggedIn = (nextState, replace) => {
   if(!uid) replace({pathname: '/login'});
 };
 
-const logout = () => {
+const logout = (nextState, replace, cb) => {
   Auth.signOut()
     .then(() => {
       sessionStorage.removeItem('uid');
-      browserHistory.push('/login');
+      replace({pathname: '/login'});
+      cb();
     })
     .catch(err => console.log('err', err));
 };
