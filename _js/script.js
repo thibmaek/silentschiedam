@@ -2,10 +2,12 @@ import ReactDOM from 'react-dom';
 import router from './router/';
 import fetch from 'isomorphic-fetch';
 
-let draai = document.querySelectorAll('.molen-draai-img');
+
 
 const init = () => {
   ReactDOM.render(router, document.querySelector('main'));
+  
+  let draai = document.querySelectorAll('.molen-draai-img');
   if(draai) load();
 };
 
@@ -16,6 +18,7 @@ const load = () => {
 };
 
 const windInc = wind => {
+  let draai = document.querySelectorAll('.molen-draai-img');
   let windspeed = wind.query.results.channel.wind.speed;
   let kmWindspeed = Math.round(windspeed * 1.609344);
   console.log(`Hey, momenteel is de windsnelheid in Schiedam ${kmWindspeed} km/u.`);
