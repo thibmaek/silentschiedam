@@ -31,7 +31,7 @@ export default class Pand extends Component {
         </header>
         <div className='app-pand-img-wrap'>
           <aside className='app-tag'>#{genre}</aside>
-          <Link to=''>
+          <Link to={`detail/${this.props['.key']}`}>
             <img className='app-pand-img' src={`/assets/img/${imgUrl}`} alt='Devine Takeover' />
           </Link>
           <img className='app-pand-overlay' src='assets/svg/pand-overlay.svg' alt='Deunen' />

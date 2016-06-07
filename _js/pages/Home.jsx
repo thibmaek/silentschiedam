@@ -1,12 +1,15 @@
-import React, {Component} from 'react';
+import React, {Component, PropTypes} from 'react';
 import {Panden} from '../components/';
 
 import ReactFireMixin from 'reactfire';
 import reactMixin from 'react-mixin';
-
-import {Database} from '../config/firebase';
+import {Database, Auth} from '../config/firebase';
 
 export default class Home extends Component {
+  static contextTypes = {
+    router: PropTypes.object.isRequired
+  }
+
   constructor(props, context) {
     super(props, context);
     this.state = {
@@ -14,16 +17,29 @@ export default class Home extends Component {
     };
   }
 
-  componentDidMount() {
-    this.getPanden();
-  }
+  componentWillMount() {
+    this.checkLoginState();
 
-  getPanden() {
     const ref = Database.ref('panden/');
     this.bindAsArray(ref, 'panden');
   }
 
+  checkLoginState() {
+    Auth.onAuthStateChanged(user => {
+      if (user) {
+        console.log(`Logged in as ${Auth.currentUser.displayName}`);
+      } else {
+        this.context.router.push('/login');
+      }
+    });
+  }
+
   render() {
+    let indexNav = document.querySelector('.index-nav-identifier');
+    if (indexNav){
+      indexNav.style.display = 'flex';
+    }
+
     let {panden} = this.state;
 
     return(
@@ -40,11 +56,12 @@ export default class Home extends Component {
               <img src='assets/svg/draai.svg' alt='' className='molen-draai-img' />
             </div>
           </div>
+          <img className='app-pand-overlay nav-overlay' src='assets/svg/pand-overlay.svg' alt='Deunen' />
         </header>
         <section className='app-home-container'>
           <nav>
             <ul className='app-navbar'>
-              <li className='app-nav-item'><a href='#'><i className='fa fa-home' aria-hidden='true'></i>Panden</a>
+              <li className='app-nav-item'><a href='/home'><i className='fa fa-home' aria-hidden='true'></i>Panden</a>
               <div className='app-nav-active active'></div>
               </li>
               <li className='app-nav-item'><a href='/info'><i className='fa fa-info-circle' aria-hidden='true'></i>Informatie</a>

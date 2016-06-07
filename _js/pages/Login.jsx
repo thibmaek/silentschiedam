@@ -1,17 +1,26 @@
-import React, {Component} from 'react';
+import React, {Component, PropTypes} from 'react';
 
 import Firebase from 'firebase';
 import {Auth} from '../config/firebase';
 
 export default class Login extends Component {
+  static contextTypes = {
+    router: PropTypes.object.isRequired
+  }
+
   constructor(props, context) {
     super(props, context);
   }
 
   componentWillMount() {
     Auth.onAuthStateChanged(user => {
-      if(user) sessionStorage.setItem('uid', user.uid);
-      console.log(`Auth State changed to authenticated for ${user.displayName} with uid: ${user.uid}`);
+      if(user) {
+        sessionStorage.setItem('uid', user.uid);
+        console.log(`Auth State changed to authenticated for ${user.displayName} with uid: ${user.uid}`);
+        this.context.router.push('/home');
+      } else {
+        console.log('er is geen user, pls log in mate');
+      }
     });
   }
 
