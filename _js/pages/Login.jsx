@@ -19,7 +19,7 @@ export default class Login extends Component {
         console.log(`Auth State changed to authenticated for ${user.displayName} with uid: ${user.uid}`);
         this.context.router.push('/home');
       } else {
-        console.log('er is geen user');
+        console.log('er is geen user, pls log in mate');
       }
     });
   }

@@ -1,11 +1,15 @@
-import React, {Component} from 'react';
+import React, {Component, PropTypes} from 'react';
 import {Panden} from '../components/';
 
 import ReactFireMixin from 'reactfire';
 import reactMixin from 'react-mixin';
-import {Database} from '../config/firebase';
+import {Database, Auth} from '../config/firebase';
 
 export default class Home extends Component {
+  static contextTypes = {
+    router: PropTypes.object.isRequired
+  }
+
   constructor(props, context) {
     super(props, context);
     this.state = {
@@ -14,8 +18,20 @@ export default class Home extends Component {
   }
 
   componentWillMount() {
+    this.checkLoginState();
+
     const ref = Database.ref('panden/');
     this.bindAsArray(ref, 'panden');
+  }
+
+  checkLoginState() {
+    Auth.onAuthStateChanged(user => {
+      if (user) {
+        console.log(`Logged in as ${Auth.currentUser.displayName}`);
+      } else {
+        this.context.router.push('/login');
+      }
+    });
   }
 
   render() {
