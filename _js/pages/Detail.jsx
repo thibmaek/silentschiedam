@@ -1,5 +1,5 @@
 import React, {Component, PropTypes} from 'react';
-import {PlayButton} from '../components';
+import {PlayButton, DetailMap} from '../components';
 import {Database, Auth} from '../config/firebase';
 import {Link} from 'react-router';
 
@@ -48,7 +48,7 @@ export default class Detail extends Component {
     let indexNav = document.querySelector('.index-nav-identifier');
     if (indexNav) indexNav.style.display = 'none';
     if (this.state.details) {
-      let {naam, info, djs, imgUrl, status, url, genre} = this.state.details;
+      let {naam, info, djs, imgUrl, status, url, genre, location} = this.state.details;
       return(
         <div>
           <header className='app-header app-detail-header'>
@@ -78,7 +78,9 @@ export default class Detail extends Component {
               <p>{info}</p>
               <h2>Wie draait de plaatjes?</h2>
               <p>{djs}</p>
-
+            </article>
+            <article className='app-page-map'>
+              <DetailMap lat={location[0]} lng={location[1]} />
             </article>
           </section>
           <section className='app-detail-rate'>

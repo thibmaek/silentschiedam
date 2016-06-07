@@ -5,3 +5,4 @@ export Requests from './Requests';
 export Request from './Request';
 
 export PlayButton from './PlayButton';
+export DetailMap from './DetailMap';
