@@ -68,6 +68,7 @@ body {
   display: flex;
   justify-content: center;
   margin-left: -50vw;
+  margin-top: 5rem;
   width: 200vw;
 }
 
@@ -117,7 +118,7 @@ body {
   display: block;
   height: auto;
   margin: 0 auto;
-  margin-top: 2rem;
+  margin-top: 3rem;
   position: relative;
   width: 60vw;
   z-index: 4;
@@ -208,11 +209,12 @@ body {
   border-radius: 50%;
   cursor: pointer;
   display: flex;
-  height: 15rem;
+  height: 12rem;
   justify-content: center;
   position: absolute;
   right: 2rem;
   top: 15rem;
+  width: 12rem;
   z-index: 4;
 
   i {
@@ -290,6 +292,11 @@ body {
 
 .pause {
   display: none;
+}
+
+.detail-navbar {
+  background: linear-gradient(to bottom, $donkerblauw 0%,$lichtblauw 100%);
+  margin-top: -3rem;
 }
 
 .app-detail-rate {
@@ -397,6 +404,11 @@ body {
   margin: 1rem 0 0 1rem;
   padding: 1rem;
   position: absolute;
+}
+
+.app-tag-detail {
+  margin-top: -3.6rem;
+  margin-left: 0;
 }
 
 .molen-draai-img {

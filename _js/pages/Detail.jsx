@@ -28,8 +28,12 @@ export default class Detail extends Component {
   }
 
   renderDetails() {
+    let indexNav = document.querySelector('.index-nav-identifier');
+    if (indexNav){
+      indexNav.style.display = 'none';
+    }
     if (this.state.details) {
-      let {naam, info, djs, imgUrl, status, url} = this.state.details;
+      let {naam, info, djs, imgUrl, status, url, genre} = this.state.details;
       return(
         <div>
           <header className='app-header app-detail-header'>
@@ -42,12 +46,12 @@ export default class Detail extends Component {
             <div className='app-detail-imgwrap'>
               <img src={`${basename}/assets/img/${imgUrl}`} alt='Devine Takeover' className='app-detail-headerimg' />
             </div>
-            <div className='app-detail-title'><h1>{naam}<img src={`${basename}/assets/svg/icon-${status}.svg`} alt={status} width='10' /></h1></div>
+            <div className='app-detail-title'><aside className='app-tag app-tag-detail'>#{genre}</aside><h1>{naam}<img src={`${basename}/assets/svg/icon-${status}.svg`} alt={status} width='10' /></h1></div>
           </header>
           <nav>
-            <ul className='app-navbar'>
+            <ul className='app-navbar detail-navbar'>
               <li className='app-nav-item'><a href='#'><i className='fa fa-home' aria-hidden='true'></i>Over dit pand</a>
-              <div className='app-nav-active active'></div>
+              <div className='app-nav-active active detail-nav-active'></div>
               </li>
               <li className='app-nav-item'><a href='pand-verzoek.html'><i className='fa fa-music' aria-hidden='true'></i>Plaats verzoek</a>
               <div className='app-nav-active'></div></li>
@@ -55,10 +59,11 @@ export default class Detail extends Component {
           </nav>
           <section className='app-page'>
             <article className='app-page-text'>
-              {info}
-              <ul>
-                {djs}
-              </ul>
+              <h2>Wie zit hier?</h2>
+              <p>{info}</p>
+              <h2>Wie draait de plaatjes?</h2>
+              <p>{djs}</p>
+
             </article>
           </section>
           <section className='app-detail-rate'>
