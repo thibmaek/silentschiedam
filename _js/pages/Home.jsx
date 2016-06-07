@@ -1,4 +1,5 @@
 import React, {Component, PropTypes} from 'react';
+import {Link} from 'react-router';
 import {Panden} from '../components/';
 
 import ReactFireMixin from 'reactfire';
@@ -39,6 +40,8 @@ export default class Home extends Component {
     if (indexNav){
       indexNav.style.display = 'flex';
     }
+    let logoutIcon = document.querySelector('.fa-sign-out');
+    logoutIcon.style.display = 'block';
 
     let {panden} = this.state;
 
@@ -61,10 +64,10 @@ export default class Home extends Component {
         <section className='app-home-container'>
           <nav>
             <ul className='app-navbar'>
-              <li className='app-nav-item'><a href='/home'><i className='fa fa-home' aria-hidden='true'></i>Panden</a>
+              <li className='app-nav-item'><Link to='/home'><i className='fa fa-home' aria-hidden='true'></i>Panden</Link>
               <div className='app-nav-active active'></div>
               </li>
-              <li className='app-nav-item'><a href='/info'><i className='fa fa-info-circle' aria-hidden='true'></i>Informatie</a>
+              <li className='app-nav-item'><Link to='/info'><i className='fa fa-info-circle' aria-hidden='true'></i>Informatie</Link>
               <div className='app-nav-active'></div></li>
             </ul>
           </nav>

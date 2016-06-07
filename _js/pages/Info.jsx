@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router';
 
 const Info = () => {
   return(
@@ -19,10 +20,10 @@ const Info = () => {
     </header>
       <nav>
         <ul className='app-navbar'>
-          <li className='app-nav-item'><a href='/home'><i className='fa fa-home' aria-hidden='true'></i>Panden</a>
+          <li className='app-nav-item'><Link to='/home'><i className='fa fa-home' aria-hidden='true'></i>Panden</Link>
           <div className='app-nav-active'></div>
           </li>
-          <li className='app-nav-item'><a href='#'><i className='fa fa-info-circle' aria-hidden='true'></i>Informatie</a>
+          <li className='app-nav-item'><Link to='/info'><i className='fa fa-info-circle' aria-hidden='true'></i>Informatie</Link>
           <div className='app-nav-active active'></div></li>
         </ul>
       </nav>

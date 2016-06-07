@@ -41,7 +41,7 @@ export default class Detail extends Component {
             <img className='app-logo-nav' src={`${basename}/assets/svg/logo.svg`} alt='Silent Schiedam' />
             <nav className='app-top-nav app-detail-topnav'>
               <Link to='/home'><i className='fa fa-arrow-left' aria-hidden='true'></i></Link>
-              <Link to='/profile'><i className='fa fa-user' aria-hidden='true'></i></Link>
+              <Link to='/logout'><i className='fa fa-sign-out' aria-hidden='true'></i></Link>
             </nav>
             <PlayButton url={url} />
             <div className='app-detail-imgwrap'>
@@ -77,6 +77,16 @@ export default class Detail extends Component {
               <i className='fa fa-star-o' aria-hidden='true'></i>
             </div>
           </section>
+        </div>
+      );
+    } else {
+      return(
+        <div className='spinner'>
+          <div className='rect1'></div>
+          <div className='rect2'></div>
+          <div className='rect3'></div>
+          <div className='rect4'></div>
+          <div className='rect5'></div>
         </div>
       );
     }
