@@ -15,7 +15,6 @@ export default class Login extends Component {
   componentWillMount() {
     Auth.onAuthStateChanged(user => {
       if(user) {
-        sessionStorage.setItem('uid', user.uid);
         console.log(`Auth State changed to authenticated for ${user.displayName} with uid: ${user.uid}`);
         this.context.router.push('/home');
       } else {
