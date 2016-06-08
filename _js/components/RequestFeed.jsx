@@ -2,6 +2,7 @@ import React, {Component, PropTypes} from 'react';
 import {Request} from '.';
 
 import {Database, Auth} from '../config/firebase';
+import moment from 'moment';
 
 export default class RequestFeed extends Component {
   static propTypes = {
@@ -14,6 +15,7 @@ export default class RequestFeed extends Component {
   }
 
   pushRequest(e) {
+    moment.locale('nl');
     e.preventDefault();
     let {artist, title} = this.refs;
     let {displayName, photoURL} = Auth.currentUser;
@@ -27,8 +29,12 @@ export default class RequestFeed extends Component {
       pandId: this.props.id,
       photoURL: photoURL,
       title: title.value,
-      date: Date()
+      date: moment().format('MMM Do YYYY, h:mm:ss')
     };
+
+    // let a = moment(`${time}`);
+    // let b = moment();
+    // let c = a.from(b);
 
     Database.ref('requests').push(req);
   }
