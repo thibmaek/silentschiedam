@@ -75,7 +75,6 @@ export default class Detail extends Component {
               <h2>Wie draait de plaatjes?</h2>
               <p>{djs}</p>
             </article>
-            <DetailMap lat={location[0]} lng={location[1]} />
           </section>
           <Rating naam={naam} pandId={this.props.params.id} />
           <section className='app-page-map'>
