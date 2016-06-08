@@ -78,6 +78,20 @@ body {
   z-index: 2;
 }
 
+.logout-knop {
+  float: right;
+  z-index: 3;
+  font-size: 3rem;
+  color: $white;
+  margin-top: -.5rem;
+
+  a {
+    display: block;
+    color: $white;
+    padding: 0 3rem;
+  }
+}
+
 .app-top-nav {
   align-items: center;
   display: flex;
