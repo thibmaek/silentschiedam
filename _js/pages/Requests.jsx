@@ -96,7 +96,7 @@ export default class Requests extends Component {
     return(
       <section>
         {this.renderHeader()}
-        <RequestFeed requests={requests} />
+        <RequestFeed requests={requests} id={this.props.params.id} />
       </section>
     );
   }
