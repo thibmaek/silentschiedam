@@ -44,7 +44,7 @@ export default class Requests extends Component {
       this.setState({details});
     });
 
-    const ref = Database.ref('requests').limitToLast(10);
+    const ref = Database.ref(`requests/${this.props.params.id}`).limitToLast(10).orderByChild('date');
     this.bindAsArray(ref, 'requests');
   }
 
@@ -96,7 +96,7 @@ export default class Requests extends Component {
     return(
       <section>
         {this.renderHeader()}
-        <RequestFeed requests={requests} />
+        <RequestFeed requests={requests} id={this.props.params.id} />
       </section>
     );
   }

@@ -4,6 +4,7 @@
 @import 'util/preloaders';
 
 @import 'partials/login';
+@import 'partials/detail';
 @import 'partials/mqueries';
 
 * {
@@ -289,7 +290,7 @@ body {
   }
 
   aside {
-    color: $lichtgrijs;
+    color: $white;
     font-family: $mainfont;
     font-size: 1.5rem;
     font-weight: 400;
@@ -312,23 +313,6 @@ body {
 .detail-navbar {
   background: linear-gradient(to bottom, $donkerblauw 0%,$lichtblauw 100%);
   margin-top: -3rem;
-}
-
-.app-detail-rate {
-  align-items: center;
-  background: linear-gradient(to bottom, $donkerrood 0%, $lichtrood 100%);
-  color: $white;
-  display: flex;
-  flex-direction: column;
-  font-family: $slabfont;
-  font-size: 2.5rem;
-  height: 20rem;
-  justify-content: center;
-}
-
-.app-sterren {
-  font-size: 4rem;
-  margin-top: 1rem;
 }
 
 .app-input-request {
@@ -422,8 +406,8 @@ body {
 }
 
 .app-tag-detail {
-  margin-top: -3.6rem;
   margin-left: 0;
+  margin-top: -3.6rem;
 }
 
 .molen-draai-img {
@@ -462,4 +446,8 @@ body {
   margin-left: 30vw;
   margin-top: -39vw;
   transform: scale(.6);
+}
+
+.app-pand-status {
+  color: $gray;
 }

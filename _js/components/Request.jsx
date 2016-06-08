@@ -1,5 +1,4 @@
 import React, {Component, PropTypes} from 'react';
-import {Auth} from '../config/firebase';
 
 export default class Request extends Component {
   constructor(props, context) {

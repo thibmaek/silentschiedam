@@ -1,0 +1,14 @@
+.app-detail-rate {
+  align-items: center;
+  background: linear-gradient(to bottom, $donkerrood 0%, $lichtrood 100%);
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  font-family: $slabfont;
+  font-size: 2.5rem;
+  height: 20rem;
+  justify-content: center;
+
+  .app-select-filter {width: 40%;}
+  p {font-size: 1.6em;}
+}

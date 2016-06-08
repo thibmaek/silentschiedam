@@ -1,5 +1,5 @@
 import React, {Component, PropTypes} from 'react';
-import {PlayButton, DetailMap} from '../components';
+import {PlayButton, DetailMap, Rating} from '../components';
 import {Database, Auth} from '../config/firebase';
 import {Link} from 'react-router';
 
@@ -39,7 +39,7 @@ export default class Detail extends Component {
   componentWillMount() {
     this.checkLoginState();
   }
-  
+
   renderDetails() {
     let indexNav = document.querySelector('.index-nav-identifier');
     if (indexNav) indexNav.style.display = 'none';
@@ -77,18 +77,9 @@ export default class Detail extends Component {
             </article>
             <DetailMap lat={location[0]} lng={location[1]} />
           </section>
-          <section className='app-detail-rate'>
-            Rate '{naam}'
-            <div className='app-sterren'>
-              <i className='fa fa-star-o' aria-hidden='true'></i>
-              <i className='fa fa-star-o' aria-hidden='true'></i>
-              <i className='fa fa-star-o' aria-hidden='true'></i>
-              <i className='fa fa-star-o' aria-hidden='true'></i>
-              <i className='fa fa-star-o' aria-hidden='true'></i>
-            </div>
-          </section>
+          <Rating naam={naam} pandId={this.props.params.id} />
           <section className='app-page-map'>
-            <DetailMap lat={location[0]} lng={location[1]} />
+            {/*<DetailMap lat={location[0]} lng={location[1]} />*/}
           </section>
         </div>
       );

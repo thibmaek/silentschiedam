@@ -6,3 +6,4 @@ export Request from './Request';
 
 export PlayButton from './PlayButton';
 export DetailMap from './DetailMap';
+export Rating from './Rating';

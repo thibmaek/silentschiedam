@@ -27,7 +27,7 @@ export default class Pand extends Component {
       <article className='app-pand'>
         <header>
           {naam}
-          <aside><img src={`/assets/svg/icon-${status}.svg`} alt={status} width='10' /> {status}</aside>
+          <aside className='app-pand-status'><img src={`/assets/svg/icon-${status}.svg`} alt={status} width='10' /> {status}</aside>
         </header>
         <div className='app-pand-img-wrap'>
           <aside className='app-tag'>#{genre}</aside>
