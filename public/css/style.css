@@ -312,6 +312,20 @@ body {
   z-index: 2;
 }
 
+.logout-knop {
+  color: #fff;
+  float: right;
+  font-size: 3rem;
+  margin-top: -.5rem;
+  z-index: 3;
+}
+
+.logout-knop a {
+  color: #fff;
+  display: block;
+  padding: 0 3rem;
+}
+
 .app-top-nav {
   -ms-flex-align: center;
   align-items: center;
