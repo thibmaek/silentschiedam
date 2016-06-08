@@ -157,12 +157,32 @@ main {
   justify-content: center;
 }
 
-.app-detail-rate .app-select-filter {
-  width: 40%;
+.app-detail-rate p {
+  font-size: 1.3em;
 }
 
-.app-detail-rate p {
-  font-size: 1.6em;
+.app-detail-rater {
+  display: -ms-flexbox;
+  display: flex;
+  width: 80%;
+}
+
+.app-detail-rater select {
+  width: 60%;
+}
+
+.app-detail-rater button {
+  margin-top: -3px;
+}
+
+.app-rating-button {
+  background-color: #fff;
+  border: 0;
+  display: block;
+  margin: 1rem auto 2rem;
+  padding: .5rem;
+  color: #333;
+  font-size: 1em;
 }
 
 @media only screen and (max-width: 1000px) {

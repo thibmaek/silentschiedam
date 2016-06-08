@@ -9,6 +9,21 @@
   height: 20rem;
   justify-content: center;
 
-  .app-select-filter {width: 40%;}
-  p {font-size: 1.6em;}
+  p {font-size: 1.3em;}
+}
+
+.app-detail-rater {
+  display: flex;
+  width: 80%;
+
+  select {width: 60%;}
+  button {
+    margin-top: -3px;
+  }
+}
+
+.app-rating-button {
+  @include app-button($white);
+  color: $lichtzwart;
+  font-size: 1em;
 }

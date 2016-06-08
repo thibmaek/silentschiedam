@@ -16,3 +16,11 @@
 
   i {padding-right: 1rem;}
 }
+
+@mixin app-button($color) {
+  background-color: $color;
+  border: 0;
+  display: block;
+  margin: 1rem auto 2rem;
+  padding: .5rem;
+}

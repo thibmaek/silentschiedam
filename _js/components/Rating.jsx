@@ -21,16 +21,18 @@ export default class Rating extends Component {
     return(
       <section className='app-detail-rate'>
         <p>Rate '{this.props.naam}'</p>
-        <select ref='rating' className='app-select-filter' name='genre' id='genre'>
-          <option value='1'>1</option>
-          <option value='2'>2</option>
-          <option value='3'>3</option>
-          <option value='4'>4</option>
-          <option value='5'>5</option>
-        </select>
-        <button className='app-rating-button' type='submit' onClick={e => this.pushRating(e)}>
-          Rate
-        </button>
+        <div className='app-detail-rater'>
+          <select ref='rating' className='app-select-filter' name='genre' id='genre'>
+            <option value='1'>1 ✩</option>
+            <option value='2'>2 ✩✩</option>
+            <option value='3'>3 ✩✩✩</option>
+            <option value='4'>4 ✩✩✩✩</option>
+            <option value='5'>5 ✩✩✩✩✩</option>
+          </select>
+          <button className='app-rating-button' type='submit' onClick={e => this.pushRating(e)}>
+            Rate!
+          </button>
+        </div>
       </section>
     );
   }
