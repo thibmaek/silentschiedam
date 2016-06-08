@@ -26,7 +26,6 @@ export default class RequestFeed extends Component {
     const req = {
       artist: artist.value,
       displayName: displayName,
-      pandId: this.props.id,
       photoURL: photoURL,
       title: title.value,
       date: moment().format('MMM Do YYYY, h:mm:ss')
@@ -36,7 +35,7 @@ export default class RequestFeed extends Component {
     // let b = moment();
     // let c = a.from(b);
 
-    Database.ref('requests').push(req);
+    Database.ref(`requests/${this.props.id}`).push(req);
   }
 
   render() {

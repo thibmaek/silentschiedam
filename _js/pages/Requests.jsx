@@ -44,7 +44,7 @@ export default class Requests extends Component {
       this.setState({details});
     });
 
-    const ref = Database.ref('requests').limitToLast(10).orderByChild('date');
+    const ref = Database.ref(`requests/${this.props.params.id}`).limitToLast(10).orderByChild('date');
     this.bindAsArray(ref, 'requests');
   }
 
