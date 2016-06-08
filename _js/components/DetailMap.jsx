@@ -1,21 +1,35 @@
 import React, {PropTypes} from 'react';
-
-const mapStyle = {
-  border: 0,
-  height: '200px',
-  width: '100%'
-};
+import {default as ScriptjsLoader} from 'react-google-maps/lib/async/ScriptjsLoader';
+import {GoogleMap, Marker} from 'react-google-maps';
 
 const DetailMap = location => {
   const {lat, lng} = location;
-  return(
-    <iframe src={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d615.2507140017236!2d${lng}!3d${lat}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTHCsDU0JzU2LjQiTiA0wrAyMyc1Mi43IkU!5e0!3m2!1sen!2sbe!4v1465332408646`}
-    style={mapStyle} frameBorder='0'></iframe>
+  const version = Math.ceil(Math.random() * 22);
+
+  return (
+    <article className='app-page-map'>
+    <ScriptjsLoader hostname='maps.googleapis.com' pathname={"/maps/api/js"}
+    query={{v: `3.${version}`, libraries: 'geometry,drawing,places'}}
+    loadingElement={<div className='spinner'>
+      <div className='rect1'></div>
+      <div className='rect2'></div>
+      <div className='rect3'></div>
+      <div className='rect4'></div>
+      <div className='rect5'></div>
+    </div>} containerElement={<div />}
+    googleMapElement={
+      <GoogleMap defaultZoom={3} defaultCenter={{lat, lng}}>
+        <Marker />
+      </GoogleMap>
+    }
+    />
+    </article>
   );
 };
 
 DetailMap.propTypes = {
-  location: PropTypes.object.isRequired
+  lat: PropTypes.number.isRequired,
+  lng: PropTypes.number.isRequired
 };
 
 export default DetailMap;

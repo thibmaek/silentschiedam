@@ -1,5 +1,5 @@
 import React, {Component, PropTypes} from 'react';
-import {PlayButton, Request} from '../components';
+import {PlayButton} from '../components';
 import {Database, Auth} from '../config/firebase';
 import {Link} from 'react-router';
 

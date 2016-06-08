@@ -65,10 +65,10 @@ export default class Detail extends Component {
           </header>
           <nav>
             <ul className='app-navbar detail-navbar'>
-              <li className='app-nav-item'><a href='#'><i className='fa fa-home' aria-hidden='true'></i>Over dit pand</a>
+              <li className='app-nav-item'><Link to={`/detail/${this.props.params.id}`}><i className='fa fa-home' aria-hidden='true'></i>Over dit pand</Link>
               <div className='app-nav-active active detail-nav-active'></div>
               </li>
-              <li className='app-nav-item'><a href='pand-verzoek.html'><i className='fa fa-music' aria-hidden='true'></i>Plaats verzoek</a>
+              <li className='app-nav-item'><Link to={`/request/${this.props.params.id}`}><i className='fa fa-music' aria-hidden='true'></i>Plaats verzoek</Link>
               <div className='app-nav-active'></div></li>
             </ul>
           </nav>
@@ -79,9 +79,7 @@ export default class Detail extends Component {
               <h2>Wie draait de plaatjes?</h2>
               <p>{djs}</p>
             </article>
-            <article className='app-page-map'>
-              <DetailMap lat={location[0]} lng={location[1]} />
-            </article>
+            <DetailMap lat={location[0]} lng={location[1]} />
           </section>
           <section className='app-detail-rate'>
             Rate '{naam}'
