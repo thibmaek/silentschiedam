@@ -1,31 +1,28 @@
 import React, {PropTypes} from 'react';
-import {default as ScriptjsLoader} from 'react-google-maps/lib/async/ScriptjsLoader';
+import ScriptjsLoader from 'react-google-maps/lib/async/ScriptjsLoader';
 import {GoogleMap, Marker} from 'react-google-maps';
 
 const DetailMap = location => {
   const {lat, lng} = location;
-  const version = Math.ceil(Math.random() * 22);
 
   return (
-    <article className='app-page-map'>
-    <ScriptjsLoader hostname='maps.googleapis.com' pathname={"/maps/api/js"}
-    query={{v: `3.${version}`, libraries: 'geometry,drawing,places'}}
-    loadingElement={<div className='spinner'>
-      <div className='rect1'></div>
-      <div className='rect2'></div>
-      <div className='rect3'></div>
-      <div className='rect4'></div>
-      <div className='rect5'></div>
-    </div>} containerElement={<div />}
-    googleMapElement={
-      <GoogleMap defaultZoom={3} defaultCenter={{lat, lng}}>
-        <Marker />
-      </GoogleMap>
-    }
+    <ScriptjsLoader hostname={'maps.googleapis.com'} pathname={'/maps/api/js'}
+      query={{
+        v: 3.24,
+        key: 'AIzaSyCJOQ7p5zAjGdDLFJqqbzTDUq-5gYreOS4',
+        libraries: 'geometry,drawing,places'
+      }}
+      loadingElement={<div><i className='fa fa-spinner' aria-hidden='true' /></div>}
+      containerElement={<article id='google-map-container' className='app-page-map' />}
+      googleMapElement={
+        <GoogleMap defaultZoom={3} defaultCenter={{lat, lng}}>
+          <Marker position={{lat, lng}} />
+        </GoogleMap>
+      }
     />
-    </article>
   );
 };
+
 
 DetailMap.propTypes = {
   lat: PropTypes.number.isRequired,

@@ -8,32 +8,20 @@ export default class PlayButton extends Component {
   constructor(props, context) {
     super(props, context);
     this.state = {
-      status: 'play'
+      playing: false,
+      icon: 'play'
     };
   }
 
   playHandler() {
-    const audio = new Audio(this.props.url);
-    let {status} = this.state;
-
-    if (status === 'play') {
-      audio.pause();
-      this.setState({
-        status: 'pause'
-      });
-    } else {
-      audio.play();
-      this.setState({
-        status: 'play'
-      });
-    }
+    let {playing} = this.state;
   }
 
   render() {
-    let {status} = this.state;
+    let {icon} = this.state;
 
     return(
-      <div onClick={() => this.playHandler()} className={`app-audio-control ${status}`}><i className={`fa fa-${status}`} aria-hidden='true'></i></div>
+      <div onClick={() => this.playHandler()} className={'app-audio-control'}><i className={`fa fa-${icon}`} aria-hidden='true'></i></div>
     );
   }
 }
