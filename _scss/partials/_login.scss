@@ -10,16 +10,9 @@
 }
 
 .login-button-facebook {
-  background-color: $facebook;
-  border: 0;
-  color: $white;
-  display: block;
-  font-size: 1.6em;
-  margin: 1rem auto 2rem;
-  padding: .5rem;
-  width: 80%;
+  @include login-button($facebook);
+}
 
-  i {
-    padding-right: 1rem;
-  }
+.login-button-twitter {
+  @include login-button($twitter);
 }

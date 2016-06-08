@@ -3,3 +3,16 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+@mixin login-button($color) {
+  background-color: $color;
+  border: 0;
+  color: $white;
+  display: block;
+  font-size: 1.6em;
+  margin: 1rem auto 2rem;
+  padding: .5rem;
+  width: 80%;
+
+  i {padding-right: 1rem;}
+}
