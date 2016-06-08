@@ -141,6 +141,30 @@ main {
   padding-right: 1rem;
 }
 
+.app-detail-rate {
+  -ms-flex-align: center;
+  align-items: center;
+  background: linear-gradient(to bottom, #ce4348 0%, #e0534b 100%);
+  color: #fff;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-family: "Roboto Slab", serif;
+  font-size: 2.5rem;
+  height: 20rem;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.app-detail-rate .app-select-filter {
+  width: 40%;
+}
+
+.app-detail-rate p {
+  font-size: 1.6em;
+}
+
 @media only screen and (max-width: 1000px) {
   .site-stappen {
     width: 100%;
@@ -545,7 +569,7 @@ body {
 }
 
 .app-pand aside {
-  color: #eaeaea;
+  color: #fff;
   font-family: "Helvetica", Arial, sans-serif;
   font-size: 1.5rem;
   font-weight: 400;
@@ -567,27 +591,6 @@ body {
 .detail-navbar {
   background: linear-gradient(to bottom, #2a7fb6 0%, #1db2c1 100%);
   margin-top: -3rem;
-}
-
-.app-detail-rate {
-  -ms-flex-align: center;
-  align-items: center;
-  background: linear-gradient(to bottom, #ce4348 0%, #e0534b 100%);
-  color: #fff;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  font-family: "Roboto Slab", serif;
-  font-size: 2.5rem;
-  height: 20rem;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.app-sterren {
-  font-size: 4rem;
-  margin-top: 1rem;
 }
 
 .app-input-request {
@@ -694,8 +697,8 @@ body {
 }
 
 .app-tag-detail {
-  margin-top: -3.6rem;
   margin-left: 0;
+  margin-top: -3.6rem;
 }
 
 .molen-draai-img {
@@ -740,4 +743,8 @@ body {
   margin-left: 30vw;
   margin-top: -39vw;
   transform: scale(0.6);
+}
+
+.app-pand-status {
+  color: #808080;
 }
