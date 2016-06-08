@@ -79,9 +79,6 @@ export default class Detail extends Component {
               <h2>Wie draait de plaatjes?</h2>
               <p>{djs}</p>
             </article>
-            <article className='app-page-map'>
-              <DetailMap lat={location[0]} lng={location[1]} />
-            </article>
           </section>
           <section className='app-detail-rate'>
             Rate '{naam}'
@@ -92,6 +89,9 @@ export default class Detail extends Component {
               <i className='fa fa-star-o' aria-hidden='true'></i>
               <i className='fa fa-star-o' aria-hidden='true'></i>
             </div>
+          </section>
+          <section className='app-page-map'>
+            <DetailMap lat={location[0]} lng={location[1]} />
           </section>
         </div>
       );
