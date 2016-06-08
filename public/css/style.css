@@ -313,16 +313,16 @@ body {
 }
 
 .logout-knop {
-  float: right;
-  z-index: 3;
-  font-size: 3rem;
   color: #fff;
+  float: right;
+  font-size: 3rem;
   margin-top: -.5rem;
+  z-index: 3;
 }
 
 .logout-knop a {
-  display: block;
   color: #fff;
+  display: block;
   padding: 0 3rem;
 }
 

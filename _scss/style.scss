@@ -79,15 +79,15 @@ body {
 }
 
 .logout-knop {
-  float: right;
-  z-index: 3;
-  font-size: 3rem;
   color: $white;
+  float: right;
+  font-size: 3rem;
   margin-top: -.5rem;
+  z-index: 3;
 
   a {
-    display: block;
     color: $white;
+    display: block;
     padding: 0 3rem;
   }
 }
