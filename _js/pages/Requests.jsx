@@ -1,11 +1,14 @@
 import React, {Component, PropTypes} from 'react';
-import {PlayButton} from '../components';
+import {PlayButton, RequestFeed} from '../components';
 import {Database, Auth} from '../config/firebase';
 import {Link} from 'react-router';
 
+import ReactFireMixin from 'reactfire';
+import reactMixin from 'react-mixin';
+
 import {basename} from '../config/globals';
 
-export default class Detail extends Component {
+export default class Requests extends Component {
   static propTypes = {
     params: PropTypes.object.isRequired
   };
@@ -16,7 +19,9 @@ export default class Detail extends Component {
 
   constructor(props, context) {
     super(props, context);
-    this.state = {};
+    this.state = {
+      requests: []
+    };
   }
 
   checkLoginState() {
@@ -29,28 +34,25 @@ export default class Detail extends Component {
     });
   }
 
-  componentDidMount() {
-    this.getDetails();
-  }
-
   componentWillMount() {
     this.checkLoginState();
   }
 
-  getDetails() {
+  componentDidMount() {
     Database.ref(`panden/${this.props.params.id}`).on('value', snapshot => {
       const details = snapshot.val();
       this.setState({details});
     });
+
+    const ref = Database.ref('requests').limitToLast(10);
+    this.bindAsArray(ref, 'requests');
   }
 
-  renderDetails() {
+  renderHeader() {
     let indexNav = document.querySelector('.index-nav-identifier');
-    if (indexNav){
-      indexNav.style.display = 'none';
-    }
+    if (indexNav) indexNav.style.display = 'none';
     if (this.state.details) {
-      let {naam, info, djs, imgUrl, status, url, genre} = this.state.details;
+      let {naam, imgUrl, status, url, genre} = this.state.details;
       return(
         <div>
           <header className='app-header app-detail-header'>
@@ -67,32 +69,13 @@ export default class Detail extends Component {
           </header>
           <nav>
             <ul className='app-navbar detail-navbar'>
-              <li className='app-nav-item'><a href='#'><i className='fa fa-home' aria-hidden='true'></i>Over dit pand</a>
-              <div className='app-nav-active active detail-nav-active'></div>
+              <li className='app-nav-item'><Link to={`/detail/${this.props.params.id}`}><i className='fa fa-home' aria-hidden='true'></i>Over dit pand</Link>
+              <div className='app-nav-active'></div>
               </li>
-              <li className='app-nav-item'><a href='pand-verzoek.html'><i className='fa fa-music' aria-hidden='true'></i>Plaats verzoek</a>
-              <div className='app-nav-active'></div></li>
+              <li className='app-nav-item'><Link to={`/request/${this.props.params.id}`}><i className='fa fa-music' aria-hidden='true'></i>Plaats verzoek</Link>
+              <div className='app-nav-active active detail-nav-active'></div></li>
             </ul>
           </nav>
-          <section className='app-page'>
-            <article className='app-page-text'>
-              <h2>Wie zit hier?</h2>
-              <p>{info}</p>
-              <h2>Wie draait de plaatjes?</h2>
-              <p>{djs}</p>
-
-            </article>
-          </section>
-          <section className='app-detail-rate'>
-            Rate '{naam}'
-            <div className='app-sterren'>
-              <i className='fa fa-star-o' aria-hidden='true'></i>
-              <i className='fa fa-star-o' aria-hidden='true'></i>
-              <i className='fa fa-star-o' aria-hidden='true'></i>
-              <i className='fa fa-star-o' aria-hidden='true'></i>
-              <i className='fa fa-star-o' aria-hidden='true'></i>
-            </div>
-          </section>
         </div>
       );
     } else {
@@ -109,10 +92,14 @@ export default class Detail extends Component {
   }
 
   render() {
+    let {requests} = this.state;
     return(
       <section>
-        {this.renderDetails()}
+        {this.renderHeader()}
+        <RequestFeed requests={requests} />
       </section>
     );
   }
 }
+
+reactMixin(Requests.prototype, ReactFireMixin);

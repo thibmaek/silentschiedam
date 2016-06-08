@@ -37,9 +37,7 @@ export default class Home extends Component {
 
   render() {
     let indexNav = document.querySelector('.index-nav-identifier');
-    if (indexNav){
-      indexNav.style.display = 'flex';
-    }
+    if (indexNav) indexNav.style.display = 'flex';
     let logoutIcon = document.querySelector('.fa-sign-out');
     logoutIcon.style.display = 'block';
 

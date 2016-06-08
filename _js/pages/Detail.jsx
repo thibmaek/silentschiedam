@@ -30,20 +30,16 @@ export default class Detail extends Component {
   }
 
   componentDidMount() {
-    this.getDetails();
-  }
-
-  componentWillMount() {
-    this.checkLoginState();
-  }
-
-  getDetails() {
     Database.ref(`panden/${this.props.params.id}`).on('value', snapshot => {
       const details = snapshot.val();
       this.setState({details});
     });
   }
 
+  componentWillMount() {
+    this.checkLoginState();
+  }
+  
   renderDetails() {
     let indexNav = document.querySelector('.index-nav-identifier');
     if (indexNav) indexNav.style.display = 'none';

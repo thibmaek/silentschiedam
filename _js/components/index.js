@@ -1,7 +1,7 @@
 export Panden from './Panden';
 export Pand from './Pand';
 
-export Requests from './Requests';
+export RequestFeed from './RequestFeed';
 export Request from './Request';
 
 export PlayButton from './PlayButton';
