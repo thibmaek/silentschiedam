@@ -102,15 +102,6 @@ main {
   }
 }
 
-.app-login-container {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
-
-.app-login-container h2 {
-  margin-left: 1rem;
-}
-
 .login-button-facebook {
   background-color: #3b5998;
   border: 0;
@@ -120,6 +111,8 @@ main {
   margin: 1rem auto 2rem;
   padding: .5rem;
   width: 80%;
+  position: relative;
+  z-index: 4;
 }
 
 .login-button-facebook i {
@@ -135,6 +128,8 @@ main {
   margin: 1rem auto 2rem;
   padding: .5rem;
   width: 80%;
+  position: relative;
+  z-index: 4;
 }
 
 .login-button-twitter i {
@@ -183,99 +178,6 @@ main {
   padding: .5rem;
   color: #333;
   font-size: 1em;
-}
-
-@media only screen and (max-width: 1000px) {
-  .site-stappen {
-    width: 100%;
-  }
-  .stap {
-    width: 25vw;
-    margin-bottom: 2rem;
-  }
-  .site-logo {
-    width: 50%;
-  }
-}
-
-@media only screen and (max-width: 620px) {
-  .site {
-    display: none;
-  }
-  .app {
-    display: block;
-  }
-  .app-navbar {
-    margin-top: -3rem;
-  }
-  .app-detail-title {
-    margin-top: -11rem;
-  }
-}
-
-@media only screen and (max-width: 550px) {
-  .app-header-illustratie {
-    margin-bottom: -4.5rem;
-  }
-  .app-navbar {
-    margin-top: -3rem;
-  }
-  .app-detail-title {
-    margin-top: -10rem;
-  }
-}
-
-@media only screen and (max-width: 420px) {
-  .app-navbar {
-    margin-top: -2rem;
-  }
-  .app-logo-nav {
-    width: 15rem;
-    margin-bottom: -8rem;
-  }
-  .app-detail-title {
-    margin-top: -7rem;
-  }
-}
-
-@media only screen and (max-width: 350px) {
-  .app-nav-active {
-    margin-top: 1.5rem;
-  }
-  .app-nav-item a {
-    font-size: 1.5rem;
-    font-weight: 400;
-  }
-  p {
-    font-size: 1.5rem;
-  }
-  h2 {
-    font-size: 2rem;
-  }
-  .app-detail-title {
-    margin-top: -6rem;
-  }
-  .app-detail-title h1 {
-    font-size: 2rem;
-  }
-  .app-audio-control {
-    width: 13rem;
-    height: 13rem;
-  }
-  .app-audio-control i {
-    font-size: 4rem;
-    color: white;
-  }
-  .app-logo-nav {
-    width: 10rem;
-    margin-bottom: -6rem;
-  }
-}
-
-@media only screen and (max-width: 320px) {
-  .app-navbar {
-    margin-top: -0.5rem;
-  }
 }
 
 * {
@@ -766,4 +668,119 @@ body {
 
 .app-pand-status {
   color: #808080;
+}
+
+.login-header {
+  min-height: 100vh;
+  max-height: 200vh;
+  height: auto;
+  background: linear-gradient(to bottom, #2a7fb6 0%, #1db2c1 100%);
+}
+
+.login-text {
+  margin-top: 4rem;
+  color: #fff;
+}
+
+.login-molen {
+  position: absolute;
+  bottom: 0;
+}
+
+@media only screen and (max-width: 1000px) {
+  .site-stappen {
+    width: 100%;
+  }
+  .stap {
+    width: 25vw;
+    margin-bottom: 2rem;
+  }
+  .site-logo {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  .site {
+    display: none;
+  }
+  .app {
+    display: block;
+  }
+  .app-navbar {
+    margin-top: -3rem;
+  }
+  .app-detail-title {
+    margin-top: -11rem;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .app-header-illustratie {
+    margin-bottom: -4.5rem;
+  }
+  .app-navbar {
+    margin-top: -3rem;
+  }
+  .app-detail-title {
+    margin-top: -10rem;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .app-navbar {
+    margin-top: -2rem;
+  }
+  .app-logo-nav {
+    width: 15rem;
+    margin-bottom: -8rem;
+  }
+  .app-detail-title {
+    margin-top: -7rem;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .app-nav-active {
+    margin-top: 1.5rem;
+  }
+  .app-nav-item a {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  .app-detail-title {
+    margin-top: -6rem;
+  }
+  .app-detail-title h1 {
+    font-size: 2rem;
+  }
+  .app-audio-control {
+    width: 13rem;
+    height: 13rem;
+  }
+  .app-audio-control i {
+    font-size: 4rem;
+    color: white;
+  }
+  .app-logo-nav {
+    width: 10rem;
+    margin-bottom: -6rem;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .app-navbar {
+    margin-top: -0.5rem;
+  }
+  .login-header {
+    min-height: 100vh;
+    max-height: auto;
+    height: auto;
+  }
 }

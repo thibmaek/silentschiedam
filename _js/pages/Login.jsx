@@ -38,25 +38,12 @@ export default class Login extends Component {
     logoutIcon.style.display = 'none';
     return(
       <div>
-        <header className='app-header'>
+        <header className='app-header login-header'>
           <img className='app-logo' src='assets/svg/logo.svg' alt='Silent Schiedam' />
           <div className='app-header-illustratie'>
-            <div className='molenbase molen-pos-one'>
-              <img src='assets/svg/base.svg' alt='' className='molen-base-img' />
-              <img src='assets/svg/draai.svg' alt='' className='molen-draai-img' />
-            </div>
-            <div className='molenbase molen-pos-two'>
-              <img src='assets/svg/base.svg' alt='' className='molen-base-img' />
-              <img src='assets/svg/draai.svg' alt='' className='molen-draai-img' />
-            </div>
-          </div>
-        </header>
-        <section className='app-login-container'>
-          <article className='app-page-text'>
+          <article className='app-page-text login-text'>
             <h2>Welkom in de Hoogstraat!</h2>
             <p>Silent Schiedam is een muzikale winkel-ervaring in het hart van de stad Schiedam. Maak een muzikale reis door de hoogstraat en ontdek leuke nieuwe winkelconcepten.</p>
-            <h2>Log in om verder te gaan</h2>
-            <p>We hebben nog wat informatie nodig voor je kan genieten van de live-streams.</p>
             <button className='login-button-facebook' onClick={this.fbLogin}>
               <i className='fa fa-facebook-official' aria-hidden='true'></i>
                Inloggen
@@ -66,7 +53,16 @@ export default class Login extends Component {
                Inloggen
             </button>
           </article>
-        </section>
+            <div className='molenbase molen-pos-one login-molen'>
+              <img src='assets/svg/base.svg' alt='' className='molen-base-img' />
+              <img src='assets/svg/draai.svg' alt='' className='molen-draai-img' />
+            </div>
+            <div className='molenbase molen-pos-two login-molen'>
+              <img src='assets/svg/base.svg' alt='' className='molen-base-img' />
+              <img src='assets/svg/draai.svg' alt='' className='molen-draai-img' />
+            </div>
+          </div>
+        </header>
       </div>
     );
   }
