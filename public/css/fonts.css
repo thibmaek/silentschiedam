@@ -1,5 +1,5 @@
 @font-face {
     font-family: 'larsseit';
-    src: url('../font/larsseit-webfont.woff2') format('woff2'), url('larsseit-webfont.woff') format('woff');
+    src: url('../font/larsseit-webfont.woff2') format('woff2'), url('../font/larsseit-webfont.woff') format('woff');
     font-style: normal;
 }
