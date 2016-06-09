@@ -14,25 +14,25 @@ export default class PlayButton extends Component {
     this.audio = new Audio(this.props.url);
   }
 
-  playHandler() {
-    let {playing, icon} = this.state;
+  componentWillUnmount() {
+    this.audio.pause();
+  }
 
-    if (playing) {
-      this.audio.pause();
-      icon = 'pause';
-    } else {
-      this.audio.play();
-      icon = 'play';
-    }
+  playHandler() {
+    let {playing} = this.state;
+
+    if (playing) {this.audio.pause();}
+    else {this.audio.play();}
 
     this.setState({playing: !playing});
   }
 
   render() {
-    let {icon} = this.state;
+    let icon = 'fa-play';
+    if(this.state.playing) icon = 'fa-pause';
 
     return(
-      <div onClick={() => this.playHandler()} className={'app-audio-control'}><i className={`fa fa-${icon}`} aria-hidden='true'></i></div>
+      <div onClick={() => this.playHandler()} className={'app-audio-control'}><i className={`fa ${icon}`} aria-hidden='true'></i></div>
     );
   }
 }

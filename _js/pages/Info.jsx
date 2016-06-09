@@ -5,7 +5,7 @@ const Info = () => {
   return(
     <section>
     <header className='app-header'>
-      <div className='logout-knop'><Link to='/logout'><i className='fa fa-sign-out' aria-hidden='true'></i></Link></div>
+      <div className='logout-knop'><Link to='/logout'><i className='fa fa-remove' aria-hidden='true'></i></Link></div>
       <img className='app-logo' src='assets/svg/logo.svg' alt='Silent Schiedam' />
       <div className='app-header-illustratie'>
         <div className='molenbase molen-pos-one'>

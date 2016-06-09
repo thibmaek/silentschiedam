@@ -51,7 +51,7 @@ export default class Detail extends Component {
             <img className='app-logo-nav' src={`${basename}/assets/svg/logo.svg`} alt='Silent Schiedam' />
             <nav className='app-top-nav app-detail-topnav'>
               <Link to='/home'><i className='fa fa-arrow-left' aria-hidden='true'></i></Link>
-              <Link to='/logout'><i className='fa fa-sign-out' aria-hidden='true'></i></Link>
+              <Link to='/logout'><i className='fa fa-remove' aria-hidden='true'></i></Link>
             </nav>
             <PlayButton url={url} />
             <div className='app-detail-imgwrap'>
