@@ -14,6 +14,10 @@ export default class PlayButton extends Component {
     this.audio = new Audio(this.props.url);
   }
 
+  componentWillUnmount() {
+    this.audio.pause();
+  }
+
   playHandler() {
     let {playing} = this.state;
 
