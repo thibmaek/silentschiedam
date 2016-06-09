@@ -32,8 +32,24 @@ export default class RequestFeed extends Component {
     };
 
     Database.ref(`requests/${this.props.id}`).push(req)
-    .then(() => {artist.value = '';title.value = '';})
-    .catch(err => console.error(err));
+    .then(() => {
+      swal({
+        title: 'Verzoek toegevoegd',
+        text: `${artist.value} - ${title.value}`,
+        type: 'success',
+        timer: 2000
+      });
+      artist.value = '';title.value = '';
+    })
+    .catch(err => {
+      swal({
+        title: 'Je verzoek kon niet worden toegevoegd',
+        type: 'error',
+        text: err,
+        timer: 1500
+      });
+      artist.focus();
+    });
   }
 
   render() {

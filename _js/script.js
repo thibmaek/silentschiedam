@@ -2,11 +2,9 @@ import ReactDOM from 'react-dom';
 import router from './router/';
 import fetch from 'isomorphic-fetch';
 
-
-
 const init = () => {
   ReactDOM.render(router, document.querySelector('main'));
-  
+
   let draai = document.querySelectorAll('.molen-draai-img');
   if(draai) load();
 };
