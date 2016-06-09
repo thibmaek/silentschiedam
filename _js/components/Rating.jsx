@@ -13,8 +13,24 @@ export default class Rating extends Component {
 
   pushRating(e) {
     e.preventDefault();
+
     Database.ref(`/ratings/${this.props.pandId}/${Auth.currentUser.uid}`)
-      .set({score: this.refs.rating.value});
+      .set({score: parseInt(this.refs.rating.value)}).then(() => {
+        swal({
+          title: 'Rating toegevoegd',
+          type: 'success',
+          timer: 1500,
+          showConfirmButton: false
+        });
+      }).catch(err => {
+        swal({
+          title: 'Rating kon niet wordentoegevoegd',
+          type: 'error',
+          text: err,
+          timer: 1500,
+          showConfirmButton: false
+        });
+      });
   }
 
   render() {

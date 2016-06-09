@@ -62,7 +62,6 @@ export default class Request extends Component {
         </div>
         <div className='app-verzoek-like'>
           {likes} <i onClick={() => this.toggleStar()} className={`fa ${icon}`} aria-hidden='true'></i>
-          {/*<span>  Por {displayName} <i className='fa fa-hand-o-right' aria-hidden='true'></i></span>*/}
         </div>
       </article>
     );

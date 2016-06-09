@@ -16,6 +16,10 @@
     "jasmine": false
   },
 
+  "globals": {
+    "swal": true
+  },
+
   "plugins": [
     "react",
     "babel"
