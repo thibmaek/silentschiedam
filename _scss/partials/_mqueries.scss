@@ -94,8 +94,10 @@
   .app-navbar {
     margin-top: -0.5rem;
   }
-  .login-molen {
-    //display: none;
+  .login-text {
+    p {
+      font-size: 1.5rem;
+    }
   }
   .login-header {
     min-height: 100vh;

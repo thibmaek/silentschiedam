@@ -5,6 +5,7 @@
 
 @import 'partials/login';
 @import 'partials/detail';
+@import 'partials/mqueries';
 
 * {
   box-sizing: border-box;
@@ -466,5 +467,3 @@ body {
   position: absolute;
   bottom: 0;
 }
-
-@import 'partials/mqueries';
