@@ -14,7 +14,8 @@ export default class PlayButton extends Component {
   }
 
   playHandler() {
-    let {playing} = this.state;
+    let audio = new Audio(this.props.url);
+    audio.play();
   }
 
   render() {
