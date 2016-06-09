@@ -1,4 +1,5 @@
 import React, {Component, PropTypes} from 'react';
+import AudioStream from '../config/silentschiedam';
 
 export default class PlayButton extends Component {
   static propTypes = {
@@ -11,17 +12,13 @@ export default class PlayButton extends Component {
       playing: false,
       icon: 'play'
     };
-    this.audio = new Audio(this.props.url);
-  }
-
-  componentWillUnmount() {
-    this.audio.pause();
+    this.audio = new AudioStream(this.props.url);
   }
 
   playHandler() {
     let {playing} = this.state;
 
-    if (playing) {this.audio.pause();}
+    if (playing) {this.audio.stop();}
     else {this.audio.play();}
 
     this.setState({playing: !playing});
