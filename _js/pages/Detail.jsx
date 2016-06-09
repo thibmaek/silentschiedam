@@ -78,7 +78,7 @@ export default class Detail extends Component {
           </section>
           <Rating naam={naam} pandId={this.props.params.id} />
           <section className='app-page-map'>
-            {/*<DetailMap lat={location[0]} lng={location[1]} />*/}
+            <DetailMap location={location} />
           </section>
         </div>
       );
