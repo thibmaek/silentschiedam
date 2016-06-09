@@ -94,8 +94,6 @@ export default class Requests extends Component {
 
   render() {
     let {requests} = this.state;
-    requests.reverse();
-    console.log('post reverse:', requests);
     return(
       <section>
         {this.renderHeader()}
