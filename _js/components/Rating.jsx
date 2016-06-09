@@ -9,19 +9,27 @@ export default class Rating extends Component {
 
   constructor(props, context) {
     super(props, context);
+    this.state = {
+      didRate: false
+    };
   }
 
   pushRating(e) {
     e.preventDefault();
+    let status = 'toegevoegd';
+    if (this.state.didRate) {
+      status = 'gewijzigd';
+    }
 
     Database.ref(`/ratings/${this.props.pandId}/${Auth.currentUser.uid}`)
       .set({score: parseInt(this.refs.rating.value)}).then(() => {
         swal({
-          title: 'Rating toegevoegd',
+          title: `Rating ${status}`,
           type: 'success',
           timer: 1500,
           showConfirmButton: false
         });
+        this.setState({didRate: true});
       }).catch(err => {
         swal({
           title: 'Rating kon niet wordentoegevoegd',
@@ -39,11 +47,11 @@ export default class Rating extends Component {
         <p>Rate '{this.props.naam}'</p>
         <div className='app-detail-rater'>
           <select ref='rating' className='app-select-filter' name='genre' id='genre'>
-            <option value='1'>1 ✩</option>
-            <option value='2'>2 ✩✩</option>
-            <option value='3'>3 ✩✩✩</option>
-            <option value='4'>4 ✩✩✩✩</option>
             <option value='5'>5 ✩✩✩✩✩</option>
+            <option value='4'>4 ✩✩✩✩</option>
+            <option value='3'>3 ✩✩✩</option>
+            <option value='2'>2 ✩✩</option>
+            <option value='1'>1 ✩</option>
           </select>
           <button className='app-rating-button' type='submit' onClick={e => this.pushRating(e)}>
             Rate!

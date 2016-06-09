@@ -102,15 +102,6 @@ main {
   }
 }
 
-.app-login-container {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
-
-.app-login-container h2 {
-  margin-left: 1rem;
-}
-
 .login-button-facebook {
   background-color: #3b5998;
   border: 0;
@@ -120,6 +111,8 @@ main {
   margin: 1rem auto 2rem;
   padding: .5rem;
   width: 80%;
+  position: relative;
+  z-index: 4;
 }
 
 .login-button-facebook i {
@@ -135,6 +128,8 @@ main {
   margin: 1rem auto 2rem;
   padding: .5rem;
   width: 80%;
+  position: relative;
+  z-index: 4;
 }
 
 .login-button-twitter i {
@@ -275,6 +270,14 @@ main {
 @media only screen and (max-width: 320px) {
   .app-navbar {
     margin-top: -0.5rem;
+  }
+  .login-text p {
+    font-size: 1.5rem;
+  }
+  .login-header {
+    min-height: 100vh;
+    max-height: auto;
+    height: auto;
   }
 }
 
@@ -766,4 +769,21 @@ body {
 
 .app-pand-status {
   color: #808080;
+}
+
+.login-header {
+  min-height: 100vh;
+  max-height: 200vh;
+  height: auto;
+  background: linear-gradient(to bottom, #2a7fb6 0%, #1db2c1 100%);
+}
+
+.login-text {
+  margin-top: 4rem;
+  color: #fff;
+}
+
+.login-molen {
+  position: absolute;
+  bottom: 0;
 }

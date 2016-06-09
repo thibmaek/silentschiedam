@@ -1,18 +1,13 @@
 @import '../util/mixins';
 
-.app-login-container {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-
-  h2 {
-    margin-left: 1rem;
-  }
-}
-
 .login-button-facebook {
   @include login-button($facebook);
+  position: relative;
+  z-index: 4;
 }
 
 .login-button-twitter {
   @include login-button($twitter);
+  position: relative;
+  z-index: 4;
 }

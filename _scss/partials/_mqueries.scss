@@ -94,4 +94,14 @@
   .app-navbar {
     margin-top: -0.5rem;
   }
+  .login-text {
+    p {
+      font-size: 1.5rem;
+    }
+  }
+  .login-header {
+    min-height: 100vh;
+    max-height: auto;
+    height: auto;
+  }
 }

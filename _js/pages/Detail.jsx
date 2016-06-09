@@ -44,7 +44,7 @@ export default class Detail extends Component {
     let indexNav = document.querySelector('.index-nav-identifier');
     if (indexNav) indexNav.style.display = 'none';
     if (this.state.details) {
-      let {naam, info, djs, imgUrl, status, url, genre, location} = this.state.details;
+      let {naam, info, djs, imgUrl, status, url, genre} = this.state.details;
       return(
         <div>
           <header className='app-header app-detail-header'>
@@ -57,7 +57,7 @@ export default class Detail extends Component {
             <div className='app-detail-imgwrap'>
               <img src={`${basename}/assets/img/${imgUrl}`} alt='Devine Takeover' className='app-detail-headerimg' />
             </div>
-            <div className='app-detail-title'><aside className='app-tag app-tag-detail'>#{genre}</aside><h1>{naam}<img src={`${basename}/assets/svg/icon-${status}.svg`} alt={status} width='10' /></h1></div>
+            <div className='app-detail-title'><aside className='app-tag app-tag-detail'>#{genre}</aside><h1>{naam} <img src={`${basename}/assets/svg/icon-${status}.svg`} alt={status} width='12' /></h1></div>
           </header>
           <nav>
             <ul className='app-navbar detail-navbar'>
@@ -78,7 +78,7 @@ export default class Detail extends Component {
           </section>
           <Rating naam={naam} pandId={this.props.params.id} />
           <section className='app-page-map'>
-            {/*<DetailMap lat={location[0]} lng={location[1]} />*/}
+            <DetailMap />
           </section>
         </div>
       );

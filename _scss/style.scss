@@ -450,3 +450,20 @@ body {
 .app-pand-status {
   color: $gray;
 }
+
+.login-header {
+  min-height: 100vh;
+  max-height: 200vh;
+  height: auto;
+  background: linear-gradient(to bottom, $donkerblauw 0%, $lichtblauw 100%);
+}
+
+.login-text {
+  margin-top: 4rem;
+  color: $white;
+}
+
+.login-molen {
+  position: absolute;
+  bottom: 0;
+}

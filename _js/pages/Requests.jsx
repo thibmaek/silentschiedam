@@ -44,7 +44,8 @@ export default class Requests extends Component {
       this.setState({details});
     });
 
-    const ref = Database.ref(`requests/${this.props.params.id}`).limitToLast(10).orderByChild('date');
+    const ref = Database.ref(`requests/${this.props.params.id}`)
+      .orderByKey().limitToLast(10);
     this.bindAsArray(ref, 'requests');
   }
 
@@ -65,7 +66,7 @@ export default class Requests extends Component {
             <div className='app-detail-imgwrap'>
               <img src={`${basename}/assets/img/${imgUrl}`} alt='Devine Takeover' className='app-detail-headerimg' />
             </div>
-            <div className='app-detail-title'><aside className='app-tag app-tag-detail'>#{genre}</aside><h1>{naam}<img src={`${basename}/assets/svg/icon-${status}.svg`} alt={status} width='10' /></h1></div>
+            <div className='app-detail-title'><aside className='app-tag app-tag-detail'>#{genre}</aside><h1>{naam} <img src={`${basename}/assets/svg/icon-${status}.svg`} alt={status} width='12' /></h1></div>
           </header>
           <nav>
             <ul className='app-navbar detail-navbar'>
@@ -93,6 +94,8 @@ export default class Requests extends Component {
 
   render() {
     let {requests} = this.state;
+    requests.reverse();
+    console.log('post reverse:', requests);
     return(
       <section>
         {this.renderHeader()}
