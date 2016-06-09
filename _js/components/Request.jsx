@@ -1,35 +1,56 @@
 import React, {Component, PropTypes} from 'react';
+import {Database} from '../config/firebase';
 import moment from 'moment';
 
 export default class Request extends Component {
-  constructor(props, context) {
-    super(props, context);
-    this.state = {};
-  }
-
   static propTypes = {
     artist: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     likes: PropTypes.number.isRequired,
     displayName: PropTypes.string.isRequired,
     photoURL: PropTypes.string.isRequired,
-    date: PropTypes.string.isRequired
+    date: PropTypes.string.isRequired,
+    id: PropTypes.string.isRequired
   };
 
   static defaultProps = {
     likes: 0
+  };
+
+  constructor(props, context) {
+    super(props, context);
+    this.state = {
+      liked: false
+    };
   }
 
   formatDate() {
     moment.locale('nl');
     let a = moment(`${this.props.date}`);
-    let b = moment();
-    let c = a.from(b);
-    return c;
+    let b = a.from(moment());
+    return b;
+  }
+
+  toggleStar() {
+    let {liked} = this.state;
+
+    Database.ref(`requests/${this.props.id}/${this.props['.key']}`)
+    .transaction(data => {
+      if (!liked) {
+        data.likes++;
+      }
+      else {
+        data.likes--;
+      }
+      this.setState({liked: !liked});
+      return data;
+    });
   }
 
   render() {
     let {artist, title, likes, displayName, photoURL} = this.props;
+    let icon = 'fa-heart-o';
+    if(this.state.liked) icon = 'fa-heart';
 
     return(
       <article className='app-verzoek'>
@@ -39,7 +60,7 @@ export default class Request extends Component {
           <p>{artist} - {title}</p>
         </div>
         <div className='app-verzoek-like'>
-          {likes} <i className='fa fa-heart' aria-hidden='true'></i>
+          {likes} <i onClick={() => this.toggleStar()} className={`fa ${icon}`} aria-hidden='true'></i>
           {/*<span>  Por {displayName} <i className='fa fa-hand-o-right' aria-hidden='true'></i></span>*/}
         </div>
       </article>
