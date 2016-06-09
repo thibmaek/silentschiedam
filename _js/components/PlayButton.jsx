@@ -11,11 +11,21 @@ export default class PlayButton extends Component {
       playing: false,
       icon: 'play'
     };
+    this.audio = new Audio(this.props.url);
   }
 
   playHandler() {
-    let audio = new Audio(this.props.url);
-    audio.play();
+    let {playing, icon} = this.state;
+
+    if (playing) {
+      this.audio.pause();
+      icon = 'pause';
+    } else {
+      this.audio.play();
+      icon = 'play';
+    }
+
+    this.setState({playing: !playing});
   }
 
   render() {
