@@ -40,6 +40,15 @@ export default class Detail extends Component {
     this.checkLoginState();
   }
 
+  renderDjs(djs) {
+    return(
+      <ul>
+        <li>{djs[0]}</li>
+        <li>{djs[1]}</li>
+      </ul>
+    );
+  }
+
   renderDetails() {
     let indexNav = document.querySelector('.index-nav-identifier');
     if (indexNav) indexNav.style.display = 'none';
@@ -73,7 +82,7 @@ export default class Detail extends Component {
               <h2>Wie zit hier?</h2>
               <p>{info}</p>
               <h2>Wie draait de plaatjes?</h2>
-              <p>{djs}</p>
+              {this.renderDjs(djs)}
             </article>
           </section>
           <Rating naam={naam} pandId={this.props.params.id} />
