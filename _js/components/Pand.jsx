@@ -8,6 +8,7 @@ export default class Pand extends Component {
   }
 
   static propTypes = {
+    ['.key']: PropTypes.string.isRequired,
     naam: PropTypes.string.isRequired,
     status: PropTypes.string.isRequired,
     imgUrl: PropTypes.string.isRequired,

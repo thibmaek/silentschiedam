@@ -4,6 +4,7 @@ import moment from 'moment';
 
 export default class Request extends Component {
   static propTypes = {
+    ['.key']: PropTypes.string.isRequired,
     artist: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     likes: PropTypes.number.isRequired,
