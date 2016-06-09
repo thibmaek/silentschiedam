@@ -31,7 +31,9 @@ export default class RequestFeed extends Component {
       title: title.value
     };
 
-    Database.ref(`requests/${this.props.id}`).push(req);
+    Database.ref(`requests/${this.props.id}`).push(req)
+    .then(() => {artist.value = '';title.value = '';})
+    .catch(err => console.error(err));
   }
 
   render() {
