@@ -246,6 +246,18 @@ body {
 
 .app-page-text {
   padding: 0 2rem;
+
+  p {
+    font-size: 1.7rem;
+  }
+
+  em {
+    border-bottom: .2rem solid $lichtrood;
+  }
+
+  strong {
+    font-weight: bolder;
+  }
 }
 
 .app-select-filter {

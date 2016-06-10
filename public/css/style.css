@@ -541,6 +541,18 @@ body {
   padding: 0 2rem;
 }
 
+.app-page-text p {
+  font-size: 1.7rem;
+}
+
+.app-page-text em {
+  border-bottom: 0.2rem solid #e0534b;
+}
+
+.app-page-text strong {
+  font-weight: bolder;
+}
+
 .app-select-filter {
   -webkit-appearance: none;
   -moz-appearance: none;

@@ -32,11 +32,13 @@ const Info = () => {
         <article className='app-page-text'>
           <h2>Wat is Silent Schiedam?</h2>
           <p>
-          Aan de basis van het platform ligt een uniek event dat wordt georganiseerd in heel de Hoogstraat. In elk leegstaand pand krijgt een lokale DJ en/of muziekliefhebber een podium. Zowel professionele DJs als beginners, of de opa die zijn jazz-platen wil komen spelen zijn allemaal welkom. Al die muziek-feeds worden verzameld op een app, waar iedereen kan op inpluggen via zijn mobieltje.
+          Silent Schiedam is een <em>muzikale winkel-ervaring</em> in het hart van de stad Schiedam. Maak een muzikale reis door <em>de Hoogstraat</em> en ontdek leuke nieuwe winkelconcepten.
           </p>
+          <h2>Wanneer?</h2>
+          <p>Silent Schiedam is een <em>maandelijks evenement</em>, de volgende editie is op <em><strong>1 Juli 2016!</strong></em></p>
           <h2>Kan ik ook een pand hosten?</h2>
           <p>
-          We bieden winkeliers de kans aan om een podium te hosten. Concreet komt dit er op neer dat winkeliers en/of potenti&euml;le uitbaters een locatie kunnen vullen met DJs naar keuze en heel de inkleding mogen invullen naar eigen wens en branding. Dit zorgt ervoor dat winkeliers hun brand-experience kunnen uitbreiden met een muzikale noot en dat potenti&euml;le uitbaters een concept kunnen komen af toetsen aan een enthousiast publiek.
+          Wil jij je eigen stage hosten op de eerste editie van Silent Schiedam en daarmee bijdragen aan een unieke experience? Stuur dan een mail met jouw toffe idee&euml;n naar <em>hosteenpand@silentschiedam.nl</em>
           </p>
         </article>
       </section>
