@@ -94,10 +94,13 @@ export default class Requests extends Component {
 
   render() {
     let {requests} = this.state;
+    let ordered = [];
+    requests.forEach(ss => ordered.push(ss));
+    ordered = ordered.reverse();
     return(
       <section>
         {this.renderHeader()}
-        <RequestFeed requests={requests} id={this.props.params.id} />
+        <RequestFeed requests={ordered} id={this.props.params.id} />
       </section>
     );
   }
