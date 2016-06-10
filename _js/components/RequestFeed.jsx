@@ -16,7 +16,7 @@ export default class RequestFeed extends Component {
 
   pushRequest(e) {
     e.preventDefault();
-    let {artist, title} = this.refs;
+    let {artist, title, form, submit} = this.refs;
     let {displayName, photoURL} = Auth.currentUser;
 
     if(artist.value === ''){artist.focus();return;}
@@ -35,11 +35,16 @@ export default class RequestFeed extends Component {
     .then(() => {
       swal({
         title: 'Verzoek toegevoegd',
-        text: `${artist.value} - ${title.value}`,
-        type: 'success',
-        timer: 2000
+        text: `${artist.value} - ${title.value}
+        Je kan terug een verzoekje maken binnen 1 minuut.`,
+        type: 'success'
       });
       artist.value = '';title.value = '';
+      submit.disabled = true;form.classList.add('request-disabled');
+    }).then(() => {
+      setTimeout(() => {
+        form.classList.remove('request-disabled');submit.disabled = false;
+      }, 60000);
     })
     .catch(err => {
       swal({
@@ -57,12 +62,12 @@ export default class RequestFeed extends Component {
 
     return(
       <section className='app-page'>
-        <form action='' method='post' acceptCharset='utf-8' onSubmit={e => this.pushRequest(e)}>
+        <form ref='form' action='' method='post' acceptCharset='utf-8' onSubmit={e => this.pushRequest(e)}>
           <input type='text' ref='artist' className='app-input-request' placeholder='Artiest' />
           <input type='text' ref='title' className='app-input-request' placeholder='Titel' />
-          <input type='submit' className='app-request-submit' value='Verzend verzoek' />
-          {requests.map(request => <Request key={request['.key']} id={this.props.id} {...request} />)}
+          <input type='submit' ref='submit' className='app-request-submit' value='Verzend verzoek' />
         </form>
+        {requests.map(request => <Request key={request['.key']} id={this.props.id} {...request} />)}
       </section>
     );
   }

@@ -15,7 +15,12 @@ export default class Login extends Component {
   componentWillMount() {
     Auth.onAuthStateChanged(user => {
       if(user) {
-        console.log(`Auth State changed to authenticated for ${user.displayName} with uid: ${user.uid}`);
+        swal({
+          title: 'Ingelogd!',
+          text: `Welkom ${user.displayName}`,
+          type: 'success',
+          timer: 1000
+        });
         this.context.router.push('/home');
       } else {
         console.log('er is geen user, pls log in mate');

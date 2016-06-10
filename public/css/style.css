@@ -145,7 +145,7 @@ main {
   display: flex;
   -ms-flex-direction: column;
   flex-direction: column;
-  font-family: "Roboto Slab", serif;
+  font-family: "larsseit", sans-serif;
   font-size: 2.5rem;
   height: 20rem;
   -ms-flex-pack: center;
@@ -178,6 +178,10 @@ main {
   padding: .5rem;
   color: #333;
   font-size: 1em;
+}
+
+.request-disabled {
+  opacity: .3;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -287,7 +291,7 @@ main {
 
 body {
   background-color: #eaeaea;
-  font-family: "Helvetica", Arial, sans-serif;
+  font-family: "larsseit", Arial, sans-serif;
   font-size: 1.6em;
 }
 
@@ -298,9 +302,10 @@ p {
 }
 
 h2 {
-  font-family: "Roboto Slab", serif;
+  font-family: "larsseit", sans-serif;
   font-size: 2.5rem;
   font-weight: 700;
+  letter-spacing: -.2rem;
   margin-bottom: 2rem;
 }
 
@@ -393,7 +398,7 @@ body {
   color: #fff;
   display: -ms-flexbox;
   display: flex;
-  font-family: "Roboto Slab", serif;
+  font-family: "larsseit", sans-serif;
   font-size: 3rem;
   padding: 0 3rem;
   text-decoration: none;
@@ -463,7 +468,7 @@ body {
   color: #fff;
   display: -ms-flexbox;
   display: flex;
-  font-family: "Roboto Slab", serif;
+  font-family: "larsseit", sans-serif;
   font-size: 1.7rem;
   font-weight: 400;
   text-decoration: none;
@@ -499,9 +504,10 @@ body {
   background-color: #fff;
   color: #000;
   display: inline-block;
-  font-family: "Roboto Slab", serif;
+  font-family: "larsseit", sans-serif;
   font-size: 3rem;
   font-weight: 700;
+  letter-spacing: -.2rem;
   padding: 1rem;
 }
 
@@ -541,6 +547,18 @@ body {
   padding: 0 2rem;
 }
 
+.app-page-text p {
+  font-size: 1.7rem;
+}
+
+.app-page-text em {
+  border-bottom: 0.2rem solid #e0534b;
+}
+
+.app-page-text strong {
+  font-weight: bolder;
+}
+
 .app-select-filter {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -555,6 +573,7 @@ body {
   font-size: 1.5rem;
   height: 3rem;
   padding: 0 0 0 2rem;
+  width: 30%;
 }
 
 .app-intro-top {
@@ -583,16 +602,17 @@ body {
   align-items: center;
   display: -ms-flexbox;
   display: flex;
-  font-family: "Roboto Slab", serif;
+  font-family: "larsseit", sans-serif;
   font-size: 2rem;
   font-weight: 700;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  letter-spacing: -.1rem;
   padding: 1rem;
 }
 
 .app-pand aside {
-  font-family: "Helvetica", Arial, sans-serif;
+  font-family: "larsseit", Arial, sans-serif;
   font-size: 1.5rem;
   font-weight: 400;
 }
@@ -699,7 +719,7 @@ body {
 
 .app-verzoek-like {
   color: #e0534b;
-  font-family: "Roboto Slab", serif;
+  font-family: "larsseit", sans-serif;
   font-size: 2rem;
   margin-top: 1rem;
 }
@@ -786,4 +806,10 @@ body {
 .login-molen {
   position: absolute;
   bottom: 0;
+}
+
+.app-page-map {
+  width: 100vw;
+  max-width: 100vw;
+  overflow: hidden;
 }

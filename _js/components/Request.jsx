@@ -32,7 +32,7 @@ export default class Request extends Component {
     return b;
   }
 
-  toggleStar() {
+  toggleLike() {
     let {liked} = this.state;
 
     Database.ref(`requests/${this.props.id}/${this.props['.key']}`)
@@ -61,7 +61,7 @@ export default class Request extends Component {
           <p>{artist} - {title}</p>
         </div>
         <div className='app-verzoek-like'>
-          {likes} <i onClick={() => this.toggleStar()} className={`fa ${icon}`} aria-hidden='true'></i>
+          {likes} <i onClick={() => this.toggleLike()} className={`fa ${icon}`} aria-hidden='true'></i>
         </div>
       </article>
     );
