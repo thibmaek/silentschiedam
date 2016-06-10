@@ -787,3 +787,9 @@ body {
   position: absolute;
   bottom: 0;
 }
+
+.app-page-map {
+  width: 100vw;
+  max-width: 100vw;
+  overflow: hidden;
+}
