@@ -180,6 +180,10 @@ main {
   font-size: 1em;
 }
 
+.request-disabled {
+  opacity: .3;
+}
+
 @media only screen and (max-width: 1000px) {
   .site-stappen {
     width: 100%;
@@ -301,6 +305,7 @@ h2 {
   font-family: "larsseit", sans-serif;
   font-size: 2.5rem;
   font-weight: 700;
+  letter-spacing: -.2rem;
   margin-bottom: 2rem;
 }
 
@@ -502,6 +507,7 @@ body {
   font-family: "larsseit", sans-serif;
   font-size: 3rem;
   font-weight: 700;
+  letter-spacing: -.2rem;
   padding: 1rem;
 }
 
@@ -567,6 +573,7 @@ body {
   font-size: 1.5rem;
   height: 3rem;
   padding: 0 0 0 2rem;
+  width: 30%;
 }
 
 .app-intro-top {
@@ -600,6 +607,7 @@ body {
   font-weight: 700;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  letter-spacing: -.1rem;
   padding: 1rem;
 }
 

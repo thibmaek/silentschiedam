@@ -38,7 +38,7 @@ const Info = () => {
           <p>Silent Schiedam is een <em>maandelijks evenement</em>, de volgende editie is op <em><strong>1 Juli 2016!</strong></em></p>
           <h2>Kan ik ook een pand hosten?</h2>
           <p>
-          Wil jij je eigen stage hosten op de eerste editie van Silent Schiedam en daarmee bijdragen aan een unieke experience? Stuur dan een mail met jouw toffe idee&euml;n naar <em>hosteenpand@silentschiedam.nl</em>
+          Wil jij je eigen stage hosten op de eerste editie van Silent Schiedam en daarmee bijdragen aan een unieke experience? Stuur dan een mail met jouw toffe idee&euml;n naar <em><a href='mailto:hosteenpand@silentschiedam.nl'>hosteenpand@silentschiedam.nl</a></em>
           </p>
         </article>
       </section>

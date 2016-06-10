@@ -25,6 +25,7 @@ export default class Rating extends Component {
       .set({score: parseInt(this.refs.rating.value)}).then(() => {
         swal({
           title: `Rating ${status}`,
+          text: 'Bedankt voor je rating!',
           type: 'success',
           timer: 1500,
           showConfirmButton: false

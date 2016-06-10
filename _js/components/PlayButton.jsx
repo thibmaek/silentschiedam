@@ -24,6 +24,10 @@ export default class PlayButton extends Component {
     this.setState({playing: !playing});
   }
 
+  componentWillUnmount() {
+    this.audio.stop();
+  }
+
   render() {
     let icon = 'fa-play';
     if(this.state.playing) icon = 'fa-pause';

@@ -27,6 +27,7 @@ h2 {
   font-family: $slabfont;
   font-size: 2.5rem;
   font-weight: 700;
+  letter-spacing: -.2rem;
   margin-bottom: 2rem;
 }
 
@@ -213,6 +214,7 @@ body {
     font-family: $slabfont;
     font-size: 3rem;
     font-weight: 700;
+    letter-spacing: -.2rem;
     padding: 1rem;
   }
 }
@@ -272,6 +274,7 @@ body {
   font-size: 1.5rem;
   height: 3rem;
   padding: 0 0 0 2rem;
+  width: 30%;
 }
 
 .app-intro-top {
@@ -298,6 +301,7 @@ body {
     font-size: 2rem;
     font-weight: 700;
     justify-content: space-between;
+    letter-spacing: -.1rem;
     padding: 1rem;
   }
 

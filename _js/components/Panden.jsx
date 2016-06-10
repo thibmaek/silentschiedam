@@ -8,8 +8,8 @@ const Panden = ({panden}) => {
         <h2>Ontdek &amp; luister</h2>
         <select className='app-select-filter' name='genre' id='genre'>
           <option value=''>Genre</option>
-          <option value=''>Techno</option>
-          <option value=''>Deep House</option>
+          <option value='Techno'>Techno</option>
+          <option value='House'>House</option>
         </select>
       </div>
       {panden.map(pand => <Pand key={pand['.key']} {...pand} />)}
