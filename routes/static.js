@@ -37,6 +37,15 @@ module.exports = [
   },
   {
     method: 'GET',
+    path: '/font/{param*}',
+    handler: {
+      directory: {
+        path: './font'
+      }
+    }
+  },
+  {
+    method: 'GET',
     path: '/img/{param*}',
     handler: {
       directory: {
